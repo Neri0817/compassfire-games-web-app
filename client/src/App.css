@@ -199,15 +199,13 @@ footer {
 }
 
 .footer-p a {
-  color: white;
+  color: #24262b;
   text-decoration: none;
-  border-bottom: 1px solid white;
-  padding: 5px;
+  border-bottom: 1px solid #24262b;
+  padding: 0 5px;
 }
 
 .footer-p a:hover {
-  color: #df5d20;
-  background-color: #24262b;
-  border-radius: 5px;
-  border-bottom: none;
+  color: white;
+  border-bottom: 1px solid white;
 }
