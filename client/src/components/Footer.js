@@ -77,8 +77,12 @@ export const Footer = () => {
         </div>
       </div>
 
-      <p className="footer-p">© 2023, CompassFire Games. All rights reserved.</p>
-
+      <p className="footer-p">
+        Designed by <a href="https://github.com/Neri0817">Neri0817</a>
+      </p>
+      <p className="footer-p">
+        © 2023, CompassFire Games. All rights reserved.
+      </p>
     </footer>
   );
 };
