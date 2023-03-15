@@ -1,7 +1,7 @@
 export const GameShelf = () => {
   return (
     <section className="gameshelf-section">
-      <h1>GameShelf</h1>
+      <h1 className="gameshelf-section-heading">GameShelf</h1>
       <div className="gameshelf-section-search">
         <form method="">
           <input type="search" placeholder="Search..." />

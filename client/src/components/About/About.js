@@ -41,7 +41,7 @@ export const About = () => {
             </p>
           </div>
           <div className="about-section-main-items-info">
-            <i class="fa-solid fa-fire-flame-curved"></i>
+            <i className="fa-solid fa-fire-flame-curved"></i>
             <h3>Lorem ipsum</h3>
             <p>
               Lorem ipsum dolor sit amet, est in dico elit scriptorem. Eam te
@@ -49,7 +49,7 @@ export const About = () => {
             </p>
           </div>
           <div className="about-section-main-items-info">
-            <i class="fa-solid fa-trophy"></i>
+            <i className="fa-solid fa-trophy"></i>
             <h3>Lorem ipsum</h3>
             <p>
               Lorem ipsum dolor sit amet, est in dico elit scriptorem. Eam te
