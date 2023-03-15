@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Flex&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
 html,
 body {
   margin: 0;
@@ -25,6 +28,7 @@ section {
     rgba(90, 91, 93, 1) 50%,
     rgba(36, 38, 43, 1) 100%
   );
+  color: white;
 }
 
 body {
@@ -121,7 +125,7 @@ header {
 
 .home-section-content h1 {
   font-family: "Montserrat", sans-serif;
-  font-size: 64px;
+  font-size: 80px;
   margin-bottom: 0;
 }
 
@@ -129,7 +133,8 @@ header {
   color: #df5d20;
   text-transform: uppercase;
   font-style: italic;
-  margin-top: 10px;
+  margin-top: 25px;
+  text-shadow: 2px 1px rgb(0, 0, 0);
 }
 
 .home-section-content a {
@@ -166,6 +171,96 @@ header {
   background: url("./images/home-the-witcher.png") no-repeat center;
   background-size: contain;
   mix-blend-mode: hard-light;
+}
+
+/* About */
+.about-section {
+  padding: 35px;
+}
+
+.about-section-heading {
+  text-align: center;
+  font-size: 64px;
+  font-weight: 900;
+  color: white;
+  text-shadow: 2px 2px #df5d20;
+  border-bottom: 2px solid #df5d20;
+  padding-bottom: 20px;
+}
+
+.about-section-header {
+  text-align: left;
+  padding: 10px 0 30px 0;
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid #df5d20;
+}
+
+.about-section-header-content span {
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: bold;
+  color: white;
+  text-shadow: 3px 2px black;
+  border-bottom: 1px solid #df5d20;
+  padding-bottom: 5px;
+}
+.about-section-header-content span::after {
+  content: "Fire";
+  width: 30px;
+  height: 30px;
+  color: #df5d20;
+  font-family: "Roboto Flex", sans-serif;
+  font-weight: 900;
+}
+
+.about-section-header-content h1 {
+  font-family: "Roboto Flex", sans-serif;
+  font-size: 64px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.about-section-header-img {
+  width: 500px;
+  height: 200px;
+  background: url("./images/compassfire-game-web-logo2.png") no-repeat center;
+  background-size: cover;
+}
+
+.about-section-main-p {
+  text-align: center;
+  padding: 50px 200px;
+  font-size: 20px;
+  font-family: "Abel", sans-serif;
+}
+
+.about-section-main-items {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin: 50px 0;
+}
+
+.about-section-main-items-info {
+  padding: 25px 0;
+  width: 20%;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.about-section-main-items-info:hover {
+  background-color: #df5d20;
+  color: white;
+  box-shadow: 0 0 35px #0000008f;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.about-section-main-items-info i {
+  font-size: 28px;
+}
+
+.about-section-main-items-info p {
+  font-size: 14px;
+  padding: 10px;
 }
 
 /* Footer */
