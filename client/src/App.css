@@ -227,11 +227,24 @@ header {
   background-size: cover;
 }
 
+.about-section-main {
+  display: flex;
+  flex-direction: column;
+}
+
 .about-section-main-p {
   text-align: center;
   padding: 50px 200px;
   font-size: 20px;
   font-family: "Abel", sans-serif;
+}
+
+.about-section-main-img {
+  width: 500px;
+  height: 300px;
+  background: url("./images/about-page-img.png") no-repeat center;
+  background-size: contain;
+  margin: 25px auto;
 }
 
 .about-section-main-items {

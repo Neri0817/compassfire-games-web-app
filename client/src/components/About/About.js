@@ -21,6 +21,8 @@ export const About = () => {
           conceptam eu mei. In pri novum saepe eirmod.
         </p>
 
+        <div className="about-section-main-img"></div>
+
         <div className="about-section-main-items">
           <div className="about-section-main-items-info">
             <i className="fa-solid fa-gamepad"></i>
