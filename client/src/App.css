@@ -16,6 +16,11 @@ ul {
   list-style: none;
 }
 
+section {
+  /* min-height: 90vh; */
+  background-color: #24262b;
+}
+
 body {
   height: 100vh;
   font-family: "Inter", sans-serif;
@@ -99,10 +104,6 @@ header {
 }
 
 /* Home */
-.home-section {
-  /* min-height: 90vh; */
-  background-color: #24262b;
-}
 
 .home-section {
   display: flex;

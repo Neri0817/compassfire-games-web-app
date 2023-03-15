@@ -1,42 +1,43 @@
+import { Link } from "react-router-dom";
 import logo from "../../images/compassfire-game-web-logo.png";
 
 export const Header = () => {
   return (
     <header>
       <nav className="navbar">
-        <a href="/">
+        <Link to="/">
           <img src={logo} alt={"Logo"} />
-        </a>
+        </Link>
         <ul className="navbar-ul">
           <li>
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="/about">About</a>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <a href="/gameshelf">GameShelf</a>
+            <Link to="/gameshelf">GameShelf</Link>
           </li>
           <li>
-            <a href="/addgame">Add Game</a>
+            <Link to="/addgame">Add Game</Link>
           </li>
           <li>
-            <a href="/myfavourites">My Favourites</a>
+            <Link to="/myfavourites">My Favourites</Link>
           </li>
           <li>
-            <a href="/myaccount">
+            <Link to="/myaccount">
               <i className="fa-solid fa-user"></i>
               <p>Neri0817</p>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/logout">Logout</a>
+            <Link to="/logout">Logout</Link>
           </li>
           <li>
-            <a href="/login">Login</a>
+            <Link to="/login">Login</Link>
           </li>
           <li>
-            <a href="/register">Register</a>
+            <Link to="/register">Register</Link>
           </li>
         </ul>
       </nav>
