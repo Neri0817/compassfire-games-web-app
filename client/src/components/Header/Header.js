@@ -1,4 +1,4 @@
-import logo from "../images/compassfire-game-web-logo.png";
+import logo from "../../images/compassfire-game-web-logo.png";
 
 export const Header = () => {
   return (

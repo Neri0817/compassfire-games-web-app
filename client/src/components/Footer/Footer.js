@@ -1,6 +1,6 @@
 export const Footer = () => {
   return (
-    <footer>
+    <footer className="footer">
       <div className="footer-container">
         <div className="footer-container-row">
           <div className="footer-col">
@@ -33,27 +33,29 @@ export const Footer = () => {
                 <a href="/">returns</a>
               </li>
               <li>
-                <a href="/">order status</a>
-              </li>
-              <li>
                 <a href="/">payment options</a>
               </li>
             </ul>
           </div>
           <div className="footer-col">
-            <h4>online shop</h4>
+            <h4>contact us</h4>
             <ul>
               <li>
-                <a href="/">watch</a>
+                <i className="fa-regular fa-compass"></i>
+                <a href="/">CompassFire</a>
               </li>
               <li>
-                <a href="/">bag</a>
+                <i className="fa-solid fa-location-dot"></i>
+
+                <a href="/">bul. Madara, ul. Hristo Botev 55</a>
               </li>
               <li>
-                <a href="/">shoes</a>
+                <i className="fa-solid fa-globe"></i>
+                <a href="/">Sofia, Bulagria</a>
               </li>
               <li>
-                <a href="/">dress</a>
+                <i className="fa-solid fa-headset"></i>
+                <a href="/">+555 666 777 8889</a>
               </li>
             </ul>
           </div>

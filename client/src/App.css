@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Flex&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
 html,
 body {
   margin: 0;
@@ -23,10 +23,16 @@ body {
   flex-direction: column;
 }
 
+#root {
+  background-color: #df5d20;
+}
+
 /* Header */
 header {
   background-color: black;
   font-family: "Roboto Flex", sans-serif;
+  position: sticky;
+  top: 0;
 }
 
 .navbar {
@@ -41,7 +47,7 @@ header {
 
 .navbar-ul {
   display: flex;
-  width: 58%;
+  width: 50%;
   justify-content: space-evenly;
   align-items: center;
 }
@@ -92,15 +98,75 @@ header {
   width: 100%;
 }
 
-/* Footer */
-footer {
-  background-color: #df5d20;
-  color: black;
+/* Home */
+.home-section {
+  /* min-height: 90vh; */
+  background-color: #24262b;
 }
+
+.home-section {
+  display: flex;
+  justify-content: center;
+  color: white;
+  position: relative;
+  padding-top: 50px;
+}
+
+.home-section-content h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 64px;
+  margin-bottom: 0;
+}
+
+.home-section-content h4 {
+  color: #df5d20;
+  text-transform: uppercase;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.home-section-content a {
+  position: absolute;
+  top: 60%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  background-color: #df5d20;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  outline: 1px solid;
+  outline-color: rgba(255, 255, 255, 0.5);
+  outline-offset: 0px;
+  text-shadow: none;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+.home-section-content a:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),
+    0 0 20px rgba(255, 255, 255, 0.2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+}
+
+.home-section .home-section-img {
+  width: 500px;
+  height: 701px;
+  background: url("./images/home-the-witcher.png") no-repeat center;
+  background-size: contain;
+  mix-blend-mode: soft-light;
+}
+
+/* Footer */
 
 .footer-container {
   max-width: 1170px;
   margin: auto;
+  padding-bottom: 25px;
 }
 .footer-container-row {
   display: flex;
@@ -108,8 +174,9 @@ footer {
 }
 
 .footer {
-  background-color: #24262b;
-  padding: 70px 0;
+  background-color: #df5d20;
+  color: black;
+  padding: 50px 0 10px 0;
 }
 .footer-col {
   width: 25%;
@@ -133,6 +200,15 @@ footer {
   box-sizing: border-box;
   width: 50px;
 }
+.footer-col ul li {
+  display: flex;
+}
+.footer-col ul li i {
+  margin: 0 15px 0 0;
+  font-size: 16px;
+  color: #000000;
+  text-shadow: 1px 1px #666565;
+}
 .footer-col ul li:not(:last-child) {
   margin-bottom: 10px;
 }
@@ -141,7 +217,7 @@ footer {
   font-size: 16px;
   text-transform: capitalize;
   font-weight: 300;
-  text-shadow: 1.5px 1px #656565;
+  text-shadow: 1.5px 1px rgba(255, 255, 255, 0.2);
   color: rgb(255, 255, 255);
   display: block;
   transition: all 0.3s ease;
