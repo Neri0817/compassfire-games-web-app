@@ -6,7 +6,7 @@ export const Header = () => {
     <header>
       <nav className="navbar">
         <Link to="/">
-          <img src={logo} alt={"Logo"} />
+          <img src={logo} alt={"CompassFire Logo"} />
         </Link>
         <ul className="navbar-ul">
           <li>

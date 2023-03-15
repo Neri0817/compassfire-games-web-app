@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import logo from "../../images/compassfire-game-web-logo.png";
+
 export const Footer = () => {
   return (
     <footer className="footer">
@@ -17,23 +20,6 @@ export const Footer = () => {
               </li>
               <li>
                 <a href="/">affiliate program</a>
-              </li>
-            </ul>
-          </div>
-          <div className="footer-col">
-            <h4>get help</h4>
-            <ul>
-              <li>
-                <a href="/">FAQ</a>
-              </li>
-              <li>
-                <a href="/">shipping</a>
-              </li>
-              <li>
-                <a href="/">returns</a>
-              </li>
-              <li>
-                <a href="/">payment options</a>
               </li>
             </ul>
           </div>
@@ -75,6 +61,11 @@ export const Footer = () => {
                 <i className="fab fa-linkedin-in"></i>
               </a>
             </div>
+          </div>
+          <div className=" footer-img-logo">
+            <Link to="/">
+              <img src={logo} alt={"CompassFire Logo"} />
+            </Link>
           </div>
         </div>
       </div>
