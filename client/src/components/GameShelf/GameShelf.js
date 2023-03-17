@@ -25,7 +25,7 @@ export const GameShelf = () => {
               <p>
                 Genre: Arcade, Sandbox, Adventure, Single-player multiplayer
               </p>
-              <Link to="/details/:gameId">
+              <Link to="/gamedetails">
                 <button>Details</button>
               </Link>
             </div>
