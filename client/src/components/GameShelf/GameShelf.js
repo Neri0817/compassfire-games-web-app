@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
+import { Game } from "./Game/Game";
 
-export const GameShelf = () => {
+export const GameShelf = ({ games }) => {
   return (
     <section className="gameshelf-section">
       <h1 className="gameshelf-section-heading">GameShelf</h1>
@@ -14,24 +14,15 @@ export const GameShelf = () => {
         </form>
       </div>
       <div className="gameshelf-section-games">
-        <div className="gameshelf-section-games-card">
-          <div className="gameshelf-section-games-card-img">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/en/5/51/Minecraft_cover.png"
-              alt="Game's name"
-            />
-            <div className="gameshelf-section-games-card-info">
-              <h1>Minecraft</h1>
-              <p>
-                Genre: Arcade, Sandbox, Adventure, Single-player multiplayer
-              </p>
-              <Link to="/gamedetails">
-                <button>Details</button>
-              </Link>
-            </div>
-          </div>
-        </div>
+        {games.map((game) => (
+          <Game key={game._id} {...game} />
+        ))}
       </div>
+      {games.length === 0 && (
+        <div className="gameshelf-section-games-empty">
+          <h2>No games added yet!</h2>
+        </div>
+      )}
     </section>
   );
 };

@@ -382,6 +382,12 @@ header {
   cursor: pointer;
 }
 
+.gameshelf-section-games-empty {
+  text-align: center;
+  font-size: 36px;
+  text-shadow: 1px 1px black;
+}
+
 /* * AddGame */
 .addgame-section-heading {
   margin-bottom: 20px;
@@ -477,9 +483,12 @@ header {
 
 .login-section-container-div-form {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.462);
-  padding: 15px;
-  border-radius: 8px;
+}
+
+.login-section-container-div-form h2 {
+  color: #df5d20;
+  text-align: center;
+  text-shadow: 1px 1px black;
 }
 
 .login-section-container-div-form-input input {
