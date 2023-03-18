@@ -5,6 +5,8 @@ export const Login = () => {
       <div className="login-section-container">
         <div className="login-section-container-div">
           <form className="login-section-container-div-form">
+            <h2>Welcome Back!</h2>
+
             <div className="login-section-container-div-form-input">
               <input type="email" placeholder="Email" name="email" required />
             </div>
