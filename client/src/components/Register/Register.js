@@ -1,12 +1,11 @@
 export const Register = () => {
   return (
     <section className="register-section">
+      <h1 className="register-section-heading">Create Account</h1>
       <div className="register-section-container">
         <div className="register-section-container-img"></div>
         <div className="register-section-container-div">
-          <h1>Create Account</h1>
-
-          <form method="POST" className="register-section-container-div-form">
+          <form className="register-section-container-div-form">
             <div className="register-section-container-div-form-input">
               <input
                 type="text"
