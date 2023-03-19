@@ -43,14 +43,13 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/gameshelf" element={<GameShelf games={games} />} />
+          <Route path="/gameshelf/:gameId" element={<GameDetails />} />
           <Route
             path="/addgame"
             element={<AddGame onAddGameSubmit={onAddGameSubmit} />}
           />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          {/* details page */}
-          <Route path="/gamedetails" element={<GameDetails />} />
         </Routes>
       </main>
 
