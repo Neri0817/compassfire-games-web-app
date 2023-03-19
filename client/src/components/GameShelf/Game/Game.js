@@ -8,7 +8,8 @@ export const Game = ({ name, genre, imageUrl, _id }) => {
         <div className="gameshelf-section-games-card-info">
           <h1>{name}</h1>
           <p>{genre}</p>
-          <Link to="/gamedetails">
+          <Link to="/gamedetails/">
+            {/* todo the link to work */}
             <button>Details</button>
           </Link>
         </div>

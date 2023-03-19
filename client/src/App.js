@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import "./App.css";
 import { About } from "./components/About/About";
 import { Home } from "./components/Home/Home";
@@ -10,10 +10,12 @@ import { GameDetails } from "./components/GameDetails/GameDetails";
 import { Login } from "./components/Login/Login";
 import { Register } from "./components/Register/Register";
 import { useEffect, useState } from "react";
+import * as gameService from "./services/gameService";
 
 const baseUrl = "http://localhost:3030/jsonstore/games";
 
 function App() {
+  const navigate = useNavigate();
   const [games, setGames] = useState([]);
 
   useEffect(() => {
@@ -24,6 +26,14 @@ function App() {
       });
   }, []);
 
+  const onAddGameSubmit = async (data) => {
+    const addedGame = await gameService.addGame(data);
+
+    setGames((games) => [...games, addedGame]);
+
+    navigate("/gameshelf");
+  };
+
   return (
     <>
       <Header />
@@ -33,7 +43,10 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/gameshelf" element={<GameShelf games={games} />} />
-          <Route path="/addgame" element={<AddGame />} />
+          <Route
+            path="/addgame"
+            element={<AddGame onAddGameSubmit={onAddGameSubmit} />}
+          />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           {/* details page */}
