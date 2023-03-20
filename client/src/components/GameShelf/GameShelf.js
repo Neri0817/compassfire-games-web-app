@@ -39,7 +39,8 @@ export const GameShelf = ({ games }) => {
           <Game key={game._id} {...game} />
         ))}
       </div>
-      {filteredData && (
+
+      {Object.keys(filteredData).length === 0 && (
         <div className="gameshelf-section-games-empty">
           <h2>Sorry, this game is not added yet...</h2>
         </div>
