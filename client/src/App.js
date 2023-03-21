@@ -12,7 +12,7 @@ import { Register } from "./components/Register/Register";
 import { useEffect, useState } from "react";
 import * as gameService from "./services/gameService";
 
-const baseUrl = "http://localhost:3030/jsonstore/games";
+const baseUrl = "http://localhost:3030/data/games";
 
 function App() {
   const navigate = useNavigate();
