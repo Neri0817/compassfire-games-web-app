@@ -30,22 +30,21 @@ export const GameShelf = ({ games }) => {
         </form>
       </div>
       <div className="gameshelf-section-games">
-        {games.length === 0 && (
-          <div className="gameshelf-section-games-empty">
-            <h2>No games added yet...</h2>
-          </div>
-        )}
-
         {filteredData.map((game) => (
           <Game key={game._id} {...game} />
         ))}
       </div>
-
-      {Object.keys(filteredData).length === 0 && (
-        <div className="gameshelf-section-games-empty">
-          <h2>Sorry, this game is not added yet...</h2>
-        </div>
-      )}
+      {games.length === 0
+        ? games.length === 0 && (
+            <div className="gameshelf-section-games-empty">
+              <h2>No games added yet...</h2>
+            </div>
+          )
+        : Object.keys(filteredData).length === 0 && (
+            <div className="gameshelf-section-games-empty">
+              <h2>Sorry, this game is not added yet...</h2>
+            </div>
+          )}
     </section>
   );
 };
