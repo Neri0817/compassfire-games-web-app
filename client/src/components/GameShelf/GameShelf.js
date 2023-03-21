@@ -11,7 +11,7 @@ export const GameShelf = ({ games }) => {
   };
 
   const filteredData = games.filter((item) =>
-    item.title.toLowerCase().includes(search.toLowerCase())
+    item.name.toLowerCase().includes(search.toLowerCase())
   );
 
   return (
