@@ -13,3 +13,14 @@ export const addGame = async (gameData) => {
   const result = await request.post(baseUrl, gameData);
   return result;
 };
+
+export const editGame = (gameId, data) =>
+  request.put(`${baseUrl}/${gameId}`, data);
+
+export const deleteGame = (gameId) => request.delete(`${baseUrl}/${gameId}`);
+
+export const addComment = async (gameId, data) => {
+  const result = await request.post(`${baseUrl}/${gameId}/comments`, data);
+
+  return result;
+};
