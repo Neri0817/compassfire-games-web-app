@@ -18,7 +18,7 @@ export const GameDetails = () => {
     gameService.getOne(gameId).then((result) => {
       setGame(result);
     });
-  }, [gameId]);
+  }, [gameId, gameService]);
 
   const onCommentSubmit = async (e) => {
     e.preventDefault();
@@ -32,6 +32,7 @@ export const GameDetails = () => {
       ...state,
       comments: { ...state.comments, [result._id]: result },
     }));
+
     setUsername("");
     setComment("");
   };
@@ -50,57 +51,51 @@ export const GameDetails = () => {
       <h1 className="details-section-heading">Game Details</h1>
       <div className="details-section-container">
         <div className="details-section-container-img">
-          <img
-            src="https://image.api.playstation.com/vulcan/ap/rnd/202212/0906/nStfI0jjW9j8U4C8uXLu3AT0.png"
-            alt="Wo Long: Fallen Dynasty"
-          />
+          <img src={game.imageUrl} alt={game.title} />
         </div>
         <div className="details-section-container-info">
-          <h1 className="details-section-container-info-title">
-            Wo Long: Fallen Dynasty
-          </h1>
+          <h1 className="details-section-container-info-title">{game.title}</h1>
           <h3 className="details-section-container-category">
-            Blood and Gore, Violence
+            Genre: {game.category}
           </h3>
 
           <h4 className="details-section-container-info-heading">
             Description:
           </h4>
           <p className="details-section-container-info-summary">
-            &nbsp;&nbsp;&nbsp; Wo Long refers to a crouching dragon, and also
-            refers to a hero or person of greatness who is not yet known. This
-            is the story of officers, who will later become heroes, during their
-            ‘unknown’ period, and also the story of a protagonist’s rise from
-            being a ‘nobody’.
+            &nbsp;&nbsp;&nbsp; {game.summary}
           </p>
 
-          <div className="details-section-container-info-btn">
-            <Link
-              to={`/gameshelf/${game._id}/edit`}
-              className="details-section-container-info-btn-edit"
-            >
-              Edit
-            </Link>
-            <button
-              className="details-section-container-info-btn-delete"
-              onClick={onDeleteClick}
-            >
-              Delete
-            </button>
-          </div>
+          {isOwner && (
+            <div className="details-section-container-info-btn">
+              <Link
+                to={`/gameshelf/${game._id}/edit`}
+                className="details-section-container-info-btn-edit"
+              >
+                Edit
+              </Link>
+              <button
+                className="details-section-container-info-btn-delete"
+                onClick={onDeleteClick}
+              >
+                Delete
+              </button>
+            </div>
+          )}
 
           <div className="details-comments">
             <h2>Comments:</h2>
             <ul>
-              {/* {game.comments &&
+              {game.comments &&
                 Object.values(game.comments).map((x) => (
                   <li key={x._id} className="comment">
                     <p>
-                      <i className="fa-solid fa-user"></i> {x.username}: {x.comment}
+                      <i className="fa-solid fa-user"></i>
+                      {x.username}:{x.comment}
                     </p>
                   </li>
-                ))} */}
-              <li>
+                ))}
+              {/* <li>
                 <p>
                   <i className="fa-solid fa-user"></i> Pesho: Nice game!
                 </p>
@@ -109,12 +104,14 @@ export const GameDetails = () => {
                 <p>
                   <i className="fa-solid fa-user"></i> Pesho: Nice game!
                 </p>
-              </li>
-            </ul>
+              </li> */}
 
-            {/* {!Object.values(game.comments).length && (
-                        <p className="no-comment">No comments.</p>
-                    )} */}
+              {/* {!Object.values(game.comments).length && (
+                <li>
+                  <p className="no-comment">No comments yet..</p>
+                </li>
+              )} */}
+            </ul>
           </div>
         </div>
       </div>

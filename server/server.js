@@ -1449,6 +1449,11 @@
         summary:
           "Explore randomly generated worlds and build amazing things from the simplest of homes to the grandest of castles. Play in creative mode with unlimited resources or mine deep into the world in survival mode, crafting weapons and armor to fend off the dangerous mobs.",
         _createdOn: 1617194128618,
+        comments: {
+          author: "Ivan",
+          comment: "Nice game! :D",
+          _id: "ivan",
+        },
       },
       "1840a313-225c-416a-817a-9954d4609f7c": {
         _ownerId: "de4ca2fb-b75d-42c9-aa07-f7aeb06c4b7b",
@@ -1459,6 +1464,11 @@
           "https://m.media-amazon.com/images/M/MV5BZWYxY2VmN2ItNjNlNi00ZmM0LWEwMjEtMTE1NGQxMGVhMWQxXkEyXkFqcGdeQXVyMTk2OTAzNTI@._V1_FMjpg_UX1000_.jpg",
         summary: "Some description",
         _createdOn: 1617194210928,
+        comments: {
+          author: "Ivan",
+          comment: "Nice game! :D",
+          _id: "ivan",
+        },
       },
       "126777f5-3277-42ad-b874-76d043b069cb": {
         _ownerId: "de4ca2fb-b75d-42c9-aa07-f7aeb06c4b7b",
@@ -1470,6 +1480,11 @@
         summary:
           "From light planes to wide-body jets, fly highly detailed and accurate aircraft in the next generation of Microsoft Flight Simulator. Test your piloting skills against the challenges of night flying, real-time atmospheric simulation and live weather in a dynamic and living world. Create your flight plan to anywhere on the planet. The world is at your fingertips.",
         _createdOn: 1617194295474,
+        comments: {
+          author: "Ivan",
+          comment: "Nice game! :D",
+          _id: "ivan",
+        },
       },
     },
     comments: {},
