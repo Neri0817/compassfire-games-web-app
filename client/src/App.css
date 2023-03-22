@@ -491,6 +491,21 @@ header {
   text-shadow: 1px 1px black;
 }
 
+.login-section-container-div-form p {
+  text-shadow: 1px 1px black;
+  text-align: center;
+}
+
+.login-section-container-div-form p a {
+  color: #df5d20;
+  text-decoration: none;
+}
+
+.login-section-container-div-form p a:hover {
+  color: rgb(125, 33, 0);
+  text-decoration: underline;
+}
+
 .login-section-container-div-form-input input {
   width: 100%;
   font-family: "Open Sans", sans-serif;
@@ -507,7 +522,7 @@ header {
 .register-section-container {
   display: flex;
   justify-content: center;
-  margin: 110px;
+  margin: 90px;
 }
 .register-section-container-img {
   background: url("./images/league-of-legends-register.png") no-repeat center;
@@ -518,6 +533,28 @@ header {
 
 .register-section-container-div {
   width: 50%;
+}
+
+.register-section-container-div h2 {
+  color: #df5d20;
+  text-shadow: 1px 1px black;
+  position: relative;
+  left: 11%;
+}
+
+.register-section-container-div p {
+  text-shadow: 1px 1px black;
+  margin-bottom: 25px;
+}
+
+.register-section-container-div p a {
+  color: #df5d20;
+  text-decoration: none;
+}
+
+.register-section-container-div p a:hover {
+  color: rgb(125, 33, 0);
+  text-decoration: underline;
 }
 
 .register-section-container-div-form-input input {

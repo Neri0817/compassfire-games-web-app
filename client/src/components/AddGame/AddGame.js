@@ -2,10 +2,10 @@ import { useState } from "react";
 
 export const AddGame = ({ onAddGameSubmit }) => {
   const [values, setValues] = useState({
-    name: "",
-    genre: "",
+    title: "",
+    category: "",
     imageUrl: "",
-    description: "",
+    summary: "",
   });
 
   const onChangeHandler = (e) => {
@@ -28,9 +28,9 @@ export const AddGame = ({ onAddGameSubmit }) => {
               <label>Name:</label>
               <input
                 type="text"
-                id="name"
-                name="name"
-                value={values.name}
+                id="title"
+                name="title"
+                value={values.title}
                 onChange={onChangeHandler}
                 placeholder="Game Name"
               />
@@ -39,9 +39,9 @@ export const AddGame = ({ onAddGameSubmit }) => {
               <label>Genre:</label>
               <input
                 type="text"
-                id="genre"
-                name="genre"
-                value={values.genre}
+                id="category"
+                name="category"
+                value={values.category}
                 onChange={onChangeHandler}
                 placeholder="Game Genre"
               />
@@ -60,11 +60,11 @@ export const AddGame = ({ onAddGameSubmit }) => {
             <div>
               <label>Description:</label>
               <textarea
-                id="description"
+                id="summary"
                 cols="50"
                 rows="5"
-                name="description"
-                value={values.description}
+                name="summary"
+                value={values.summary}
                 onChange={onChangeHandler}
                 placeholder="Game Description..."
               ></textarea>
