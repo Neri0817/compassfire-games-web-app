@@ -112,7 +112,7 @@ function App() {
             element={<AddGame onAddGameSubmit={onAddGameSubmit} />}
           />
           <Route
-            path="/catalog/:gameId/edit"
+            path="/gameshelf/:gameId/edit"
             element={<EditGame onGameEditSubmit={onGameEditSubmit} />}
           />
           <Route path="/login" element={<Login />} />
