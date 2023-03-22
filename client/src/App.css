@@ -48,7 +48,8 @@ body {
 .addgame-section,
 .register-section,
 .login-section,
-.details-section {
+.details-section,
+.edit-section {
   padding: 35px;
 }
 
@@ -57,7 +58,8 @@ body {
 .addgame-section-heading,
 .register-section-heading,
 .login-section-heading,
-.details-section-heading {
+.details-section-heading,
+.edit-section-heading {
   text-align: center;
   font-size: 64px;
   font-weight: 900;
