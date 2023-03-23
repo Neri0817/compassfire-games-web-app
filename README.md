@@ -2,7 +2,10 @@
 
 ### **To launch the application:**
 
-1. cd client -> npm start
-2. cd server -> node server.js
+###### On terminal write:
+
+1. npm i
+2. cd client -> npm start
+3. cd server -> node server.js
 
 ---
