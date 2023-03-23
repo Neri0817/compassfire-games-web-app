@@ -66,7 +66,7 @@ export const EditGame = ({ onGameEditSubmit }) => {
               <textarea
                 id="summary"
                 cols="50"
-                rows="5"
+                rows="7"
                 name="summary"
                 value={values.summary}
                 onChange={changeHandler}
