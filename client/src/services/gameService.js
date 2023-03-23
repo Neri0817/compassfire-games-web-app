@@ -26,11 +26,11 @@ export const gameServiceFactory = (token) => {
     return result;
   };
 
-  const addComment = async (gameId, data) => {
-    const result = await request.post(`${baseUrl}/${gameId}/comments`, data);
+  // const addComment = async (gameId, data) => {
+  //   const result = await request.post(`${baseUrl}/${gameId}/comments`, data);
 
-    return result;
-  };
+  //   return result;
+  // };
 
   const editGame = (gameId, data) => request.put(`${baseUrl}/${gameId}`, data);
 
@@ -41,7 +41,7 @@ export const gameServiceFactory = (token) => {
     getOne,
     addGame,
     editGame,
-    addComment,
+    //addComment,
     delete: deleteGame,
   };
 };

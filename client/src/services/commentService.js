@@ -1,6 +1,6 @@
 import * as request from "./requester";
 
-const baseUrl = "http://localhost:3030/data";
+const baseUrl = "http://localhost:3030/data/comments";
 
 export const getAll = async (gameId) => {
   const query = encodeURIComponent(`gameId="${gameId}"`);

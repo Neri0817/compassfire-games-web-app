@@ -4,7 +4,9 @@ export const Game = ({ title, category, imageUrl, _id }) => {
   return (
     <div className="gameshelf-section-games-card">
       <div className="gameshelf-section-games-card-img">
-        <img src={imageUrl} alt={title} />
+        <Link to={`/gameshelf/${_id}`}>
+          <img src={imageUrl} alt={title} />
+        </Link>
         <div className="gameshelf-section-games-card-info">
           <h1>{title}</h1>
           <p>{category}</p>
