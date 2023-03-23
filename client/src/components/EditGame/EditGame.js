@@ -23,7 +23,7 @@ export const EditGame = ({ onGameEditSubmit }) => {
     gameService.getOne(gameId).then((result) => {
       changeValues(result);
     });
-  }, [changeValues, gameId, gameService]);
+  }, [gameId]);
 
   return (
     <section className="edit-section">

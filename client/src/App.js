@@ -80,11 +80,11 @@ function App() {
   };
 
   const onGameEditSubmit = async (values) => {
-    const result = await gameService.edit(values._id, values);
+    const result = await gameService.editGame(values._id, values);
 
     setGames((state) => state.map((x) => (x._id === values._id ? result : x)));
 
-    navigate(`/catalog/${values._id}`);
+    navigate(`/gameshelf/${values._id}`);
   };
 
   const contextValues = {
