@@ -17,8 +17,6 @@ import { useEffect, useState } from "react";
 import { gameServiceFactory } from "./services/gameService";
 import { AuthProvider } from "./contexts/AuthContext";
 
-// const baseUrl = "http://localhost:3030/data/games";
-
 function App() {
   const navigate = useNavigate();
   const [games, setGames] = useState([]);
