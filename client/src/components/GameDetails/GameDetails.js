@@ -1,40 +1,46 @@
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 
 import { gameServiceFactory } from "../../services/gameService";
 import { useService } from "../../hooks/useService";
-import { AuthContext } from "../../contexts/AuthContext";
+import { useAuthContext } from "../../contexts/AuthContext";
+import { GameComments } from "./GameComments/GameComments";
+import * as commentService from "../../services/commentService";
 
 export const GameDetails = () => {
-  const { userId } = useContext(AuthContext);
-  const [username, setUsername] = useState("");
-  const [comment, setComment] = useState("");
   const { gameId } = useParams();
+  const { userId, isAuthenticated } = useAuthContext();
   const [game, setGame] = useState({});
+
   const gameService = useService(gameServiceFactory);
   const navigate = useNavigate();
 
   useEffect(() => {
-    gameService.getOne(gameId).then((result) => {
-      setGame(result);
+    Promise.all([
+      gameService.getOne(gameId),
+      commentService.getAll(gameId),
+    ]).then(([games, comments]) => {
+      setGame({
+        ...games,
+        comments,
+      });
     });
-  }, [gameId, gameService]);
+  }, [gameId]);
 
-  const onCommentSubmit = async (e) => {
-    e.preventDefault();
+  const onCommentSubmit = async (values) => {
+    const response = await commentService.create(gameId, values.comment);
 
-    // const result = await gameService.addComment(gameId, {
-    //   username,
-    //   comment,
-    // });
+    console.log(response);
+
+    setGame((g) => ({
+      ...g,
+      comments: [...g.comments, response],
+    }));
 
     // setGame((state) => ({
     //   ...state,
     //   comments: { ...state.comments, [result._id]: result },
     // }));
-
-    // setUsername("");
-    // setComment("");
   };
 
   const isOwner = game._ownerId === userId;
@@ -87,7 +93,7 @@ export const GameDetails = () => {
             <h2>Comments:</h2>
             <ul>
               {game.comments &&
-                Object.values(game.comments).map((x) => (
+                game.comments.map((x) => (
                   <li key={x._id} className="comment">
                     <p>
                       <i className="fa-solid fa-user"></i>
@@ -95,18 +101,8 @@ export const GameDetails = () => {
                     </p>
                   </li>
                 ))}
-              {/* <li>
-                <p>
-                  <i className="fa-solid fa-user"></i> Pesho: Nice game!
-                </p>
-              </li>
-              <li>
-                <p>
-                  <i className="fa-solid fa-user"></i> Pesho: Nice game!
-                </p>
-              </li> */}
 
-              {/* {!Object.values(game.comments).length && (
+              {/* {!game.comments.length && (
                 <li>
                   <p className="no-comment">No comments yet..</p>
                 </li>
@@ -116,37 +112,7 @@ export const GameDetails = () => {
         </div>
       </div>
 
-      <article className="details-create-comment">
-        <h2>Leave a comment:</h2>
-        <form
-          className="details-create-comment-form"
-          onSubmit={onCommentSubmit}
-        >
-          <div className="details-create-comment-form-user">
-            <i className="fa-solid fa-user"></i>
-            <input
-              type="text"
-              name="username"
-              placeholder="Username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-          </div>
-
-          <textarea
-            name="comment"
-            rows="5"
-            placeholder="Comment..."
-            value={comment}
-            onChange={(e) => setComment(e.target.value)}
-          ></textarea>
-          <input
-            className="details-create-comment-form-submit"
-            type="submit"
-            value="Add Comment"
-          />
-        </form>
-      </article>
+      {isAuthenticated && <GameComments onCommentSubmit={onCommentSubmit} />}
     </section>
   );
 };

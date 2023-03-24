@@ -603,21 +603,6 @@ header {
   padding: 15px;
 }
 
-.details-create-comment-form-user {
-  margin-bottom: 10px;
-}
-
-.details-create-comment-form-user i {
-  background-color: #df5d20;
-  padding: 10px;
-}
-
-.details-create-comment-form-user input {
-  height: 36px;
-  border: none;
-  font-family: "Open Sans", sans-serif;
-}
-
 .details-create-comment-form textarea {
   padding: 10px;
   font-family: "Open Sans", sans-serif;

@@ -1,46 +1,54 @@
-const request = async (method, token, url, data) => {
-    const options = {};
+const requester = async (method, token, url, data) => {
+  const options = {};
 
-    if (method !== 'GET') {
-        options.method = method;
+  if (method !== "GET") {
+    options.method = method;
 
-        if (data) {
-            options.headers = {
-                'content-type': 'application/json',
-            };
+    if (data) {
+      options.headers = {
+        "content-type": "application/json",
+      };
 
-            options.body = JSON.stringify(data);
-        }
+      options.body = JSON.stringify(data);
     }
+  }
 
-    if (token) {
-        options.headers = {
-            ...options.headers,
-            'X-Authorization': token,
-        };
-    }
+  if (token) {
+    options.headers = {
+      ...options.headers,
+      "X-Authorization": token,
+    };
+  }
 
-    const response = await fetch(url, options);
+  const response = await fetch(url, options);
 
-    if (response.status === 204) {
-        return {};
-    }
+  if (response.status === 204) {
+    return {};
+  }
 
-    const result = await response.json();
+  const result = await response.json();
 
-    if (!response.ok) {
-        throw result;
-    }
+  if (!response.ok) {
+    throw result;
+  }
 
-    return result;
+  return result;
 };
 
 export const requestFactory = (token) => {
-    return {
-        get: request.bind(null, 'GET', token),
-        post: request.bind(null, 'POST', token),
-        put: request.bind(null, 'PUT', token),
-        patch: request.bind(null, 'PATCH', token),
-        delete: request.bind(null, 'DELETE', token),
+  if (!token) {
+    const serializerAuth = localStorage.getItem("auth");
+
+    if (serializerAuth) {
+      const auth = JSON.parse(serializerAuth);
+      token = auth.accessToken;
     }
+  }
+  return {
+    get: requester.bind(null, "GET", token),
+    post: requester.bind(null, "POST", token),
+    put: requester.bind(null, "PUT", token),
+    patch: requester.bind(null, "PATCH", token),
+    delete: requester.bind(null, "DELETE", token),
+  };
 };
