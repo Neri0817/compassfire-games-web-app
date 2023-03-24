@@ -1,21 +1,15 @@
-import { useState } from "react";
+import { useForm } from "../../hooks/useForm";
 
 export const AddGame = ({ onAddGameSubmit }) => {
-  const [values, setValues] = useState({
-    title: "",
-    category: "",
-    imageUrl: "",
-    summary: "",
-  });
-
-  const onChangeHandler = (e) => {
-    setValues((state) => ({ ...state, [e.target.name]: e.target.value }));
-  };
-
-  const onSubmit = (e) => {
-    e.preventDefault();
-    onAddGameSubmit(values);
-  };
+  const { values, changeHandler, onSubmit } = useForm(
+    {
+      title: "",
+      category: "",
+      imageUrl: "",
+      summary: "",
+    },
+    onAddGameSubmit
+  );
 
   return (
     <section className="addgame-section">
@@ -31,7 +25,7 @@ export const AddGame = ({ onAddGameSubmit }) => {
                 id="title"
                 name="title"
                 value={values.title}
-                onChange={onChangeHandler}
+                onChange={changeHandler}
                 placeholder="Game Name"
               />
             </div>
@@ -42,7 +36,7 @@ export const AddGame = ({ onAddGameSubmit }) => {
                 id="category"
                 name="category"
                 value={values.category}
-                onChange={onChangeHandler}
+                onChange={changeHandler}
                 placeholder="Game Genre"
               />
             </div>
@@ -53,7 +47,7 @@ export const AddGame = ({ onAddGameSubmit }) => {
                 id="imageUrl"
                 name="imageUrl"
                 value={values.imageUrl}
-                onChange={onChangeHandler}
+                onChange={changeHandler}
                 placeholder="Upload an image..."
               />
             </div>
@@ -65,7 +59,7 @@ export const AddGame = ({ onAddGameSubmit }) => {
                 rows="5"
                 name="summary"
                 value={values.summary}
-                onChange={onChangeHandler}
+                onChange={changeHandler}
                 placeholder="Game Description..."
               ></textarea>
             </div>

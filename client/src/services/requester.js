@@ -37,13 +37,14 @@ const requester = async (method, token, url, data) => {
 
 export const requestFactory = (token) => {
   if (!token) {
-    const serializerAuth = localStorage.getItem("auth");
+    const serializedAuth = localStorage.getItem("auth");
 
-    if (serializerAuth) {
-      const auth = JSON.parse(serializerAuth);
+    if (serializedAuth) {
+      const auth = JSON.parse(serializedAuth);
       token = auth.accessToken;
     }
   }
+
   return {
     get: requester.bind(null, "GET", token),
     post: requester.bind(null, "POST", token),

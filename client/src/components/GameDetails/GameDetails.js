@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useReducer } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 
 import { gameServiceFactory } from "../../services/gameService";
@@ -6,12 +6,12 @@ import { useService } from "../../hooks/useService";
 import { useAuthContext } from "../../contexts/AuthContext";
 import { GameComments } from "./GameComments/GameComments";
 import * as commentService from "../../services/commentService";
+import { gameReducer } from '../../reducers/gameReducer';
 
 export const GameDetails = () => {
   const { gameId } = useParams();
-  const { userId, isAuthenticated } = useAuthContext();
-  const [game, setGame] = useState({});
-
+  const { userId, isAuthenticated, userEmail } = useAuthContext();
+  const [game, dispatch] = useReducer(gameReducer, {});
   const gameService = useService(gameServiceFactory);
   const navigate = useNavigate();
 
@@ -19,28 +19,24 @@ export const GameDetails = () => {
     Promise.all([
       gameService.getOne(gameId),
       commentService.getAll(gameId),
-    ]).then(([games, comments]) => {
-      setGame({
-        ...games,
+    ]).then(([gameData, comments]) => {
+      const gameState = {
+        ...gameData,
         comments,
-      });
+      };
+
+      dispatch({ type: "GAME_FETCH", payload: gameState });
     });
   }, [gameId]);
 
   const onCommentSubmit = async (values) => {
     const response = await commentService.create(gameId, values.comment);
 
-    console.log(response);
-
-    setGame((g) => ({
-      ...g,
-      comments: [...g.comments, response],
-    }));
-
-    // setGame((state) => ({
-    //   ...state,
-    //   comments: { ...state.comments, [result._id]: result },
-    // }));
+    dispatch({
+      type: "COMMENT_ADD",
+      payload: response,
+      userEmail,
+    });
   };
 
   const isOwner = game._ownerId === userId;
@@ -50,8 +46,9 @@ export const GameDetails = () => {
 
     // TODO: delete from state
 
-    navigate("/gameshelf");
+    navigate("/catalog");
   };
+  
   return (
     <section className="details-section">
       <h1 className="details-section-heading">Game Details</h1>
@@ -97,7 +94,7 @@ export const GameDetails = () => {
                   <li key={x._id} className="comment">
                     <p>
                       <i className="fa-solid fa-user"></i>
-                      {x.username}:{x.comment}
+                      {x.author.email}:{x.comment}
                     </p>
                   </li>
                 ))}
