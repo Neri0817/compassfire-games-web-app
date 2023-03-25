@@ -16,6 +16,7 @@ import { gameServiceFactory } from "./services/gameService";
 import { authServiceFactory } from "./services/authService";
 import { AuthContext } from "./contexts/AuthContext";
 import { Logout } from "./components/Logout/Logout";
+import { EditGame } from "./components/EditGame/EditGame";
 
 const baseUrl = "http://localhost:3030/data/games";
 
@@ -105,11 +106,16 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/gameshelf" element={<GameShelf games={games} />} />
-          <Route path="/gameshelf/:gameId" element={<GameDetails onGameEditSubmit={onGameEditSubmit}/>} />
+          <Route path="/gameshelf/:gameId" element={<GameDetails />} />
           <Route
             path="/addgame"
             element={<AddGame onAddGameSubmit={onAddGameSubmit} />}
           />
+          <Route
+            path="/gameshelf/:gameId/edit"
+            element={<EditGame onGameEditSubmit={onGameEditSubmit} />}
+          />
+
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/logout" element={<Logout />} />
