@@ -46,7 +46,7 @@ export const GameDetails = () => {
 
     // TODO: delete from state
 
-    navigate("/catalog");
+    navigate("/gameshelf");
   };
   
   return (
