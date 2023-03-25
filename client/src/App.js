@@ -26,7 +26,7 @@ function App() {
     gameService.getAll().then((result) => {
       setGames(result);
     });
-  }, []);
+  }, [gameService]);
 
   const onAddGameSubmit = async (data) => {
     const newGame = await gameService.create(data);

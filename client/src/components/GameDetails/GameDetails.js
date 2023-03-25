@@ -27,7 +27,7 @@ export const GameDetails = () => {
 
       dispatch({ type: "GAME_FETCH", payload: gameState });
     });
-  }, [gameId]);
+  }, [gameId, gameService]);
 
   const onCommentSubmit = async (values) => {
     const response = await commentService.create(gameId, values.comment);
