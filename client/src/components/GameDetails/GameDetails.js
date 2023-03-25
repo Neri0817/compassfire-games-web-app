@@ -6,7 +6,7 @@ import { useService } from "../../hooks/useService";
 import { useAuthContext } from "../../contexts/AuthContext";
 import { GameComments } from "./GameComments/GameComments";
 import * as commentService from "../../services/commentService";
-import { gameReducer } from '../../reducers/gameReducer';
+import { gameReducer } from "../../reducers/gameReducer";
 
 export const GameDetails = () => {
   const { gameId } = useParams();
@@ -48,7 +48,7 @@ export const GameDetails = () => {
 
     navigate("/gameshelf");
   };
-  
+
   return (
     <section className="details-section">
       <h1 className="details-section-heading">Game Details</h1>
@@ -99,11 +99,11 @@ export const GameDetails = () => {
                   </li>
                 ))}
 
-              {/* {!game.comments.length && (
+              {game?.comments && (
                 <li>
                   <p className="no-comment">No comments yet..</p>
                 </li>
-              )} */}
+              )}
             </ul>
           </div>
         </div>
