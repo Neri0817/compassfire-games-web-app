@@ -15,7 +15,7 @@ export const useForm = (initialValues, onSubmitHandler) => {
     setValues(initialValues);
   };
 
-  const changeValues = (newValues) => {
+  const changeValues = async (newValues) => {
     // TODO: Validate newValues shape (like initialValues)
 
     setValues(newValues);
