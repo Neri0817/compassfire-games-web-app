@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useGameContext } from "../../contexts/GameContext";
 import { Game } from "./Game/Game";
 
-export const GameShelf = ({ games }) => {
+export const GameShelf = () => {
+  const { games } = useGameContext();
   const [search, setSearch] = useState("");
 
   const searchHandler = (e) => {

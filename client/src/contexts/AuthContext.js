@@ -1,4 +1,4 @@
-import { createContext, useContext} from "react";
+import { createContext, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 
@@ -7,10 +7,10 @@ import { authServiceFactory } from "../services/authService";
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [auth, setAuth] = useLocalStorage('auth', {});
+  const [auth, setAuth] = useLocalStorage("auth", {});
+  const navigate = useNavigate();
 
   const authService = authServiceFactory(auth.accessToken);
-  const navigate = useNavigate();
 
   const onLoginSubmit = async (data) => {
     try {
@@ -18,7 +18,7 @@ export const AuthProvider = ({ children }) => {
 
       setAuth(result);
 
-      navigate("/");
+      navigate("/gameshelf");
     } catch (error) {
       console.log("There is a problem");
     }
@@ -35,7 +35,7 @@ export const AuthProvider = ({ children }) => {
 
       setAuth(result);
 
-      navigate("/gameshelf");
+      navigate("/");
     } catch (error) {
       console.log("There is a problem");
     }
@@ -70,4 +70,4 @@ export const useAuthContext = () => {
   const context = useContext(AuthContext);
 
   return context;
-}; 
+};
