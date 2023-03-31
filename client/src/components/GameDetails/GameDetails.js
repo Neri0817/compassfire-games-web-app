@@ -57,6 +57,13 @@ export const GameDetails = () => {
     navigate("/gameshelf");
   };
 
+  // if (game.comments) {
+  //   const keys = Object.keys(game.comments);
+  //   console.log(keys);
+  // } else {
+  //   console.log("⛔️ Object is falsy");
+  // }
+
   return (
     <section className="details-section">
       <h1 className="details-section-heading">Game Details</h1>
@@ -97,7 +104,7 @@ export const GameDetails = () => {
           <div className="details-comments">
             <h2>Comments:</h2>
             <ul>
-              {game.comments &&
+              {game.comments ? (
                 game.comments.map((x) => (
                   <li key={x._id} className="comment">
                     <p>
@@ -105,13 +112,18 @@ export const GameDetails = () => {
                       {x.author.email}: {x.comment}
                     </p>
                   </li>
-                ))}
-
-              {game?.comments && (
+                ))
+              ) : (
                 <li>
                   <p className="no-comment">No comments yet..</p>
                 </li>
               )}
+
+              {/* {game?.comments === "undefined" && (
+                <li>
+                  <p className="no-comment">No comments yet..</p>
+                </li>
+              )} */}
             </ul>
           </div>
         </div>
