@@ -102,7 +102,7 @@ export const GameDetails = () => {
                   <li key={x._id} className="comment">
                     <p>
                       <i className="fa-solid fa-user"></i>
-                      {x.author.email}:{x.comment}
+                      {x.author.email}: {x.comment}
                     </p>
                   </li>
                 ))}
