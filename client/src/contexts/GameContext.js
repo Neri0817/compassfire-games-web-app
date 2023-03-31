@@ -11,7 +11,7 @@ export const GameProvider = ({ children }) => {
 
   useEffect(() => {
     gameService.getAll().then((games) => setGames(games));
-  }, [gameService]);
+  }, []);
 
   const onAddGameSubmit = async (data) => {
     const addedGame = await gameService.addGame(data);
