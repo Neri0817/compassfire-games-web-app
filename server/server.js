@@ -1451,10 +1451,11 @@
       "1840a313-225c-416a-817a-9954d4609f7c": {
         _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
         title: "War Zone",
-        category: "Arcade",
+        category: "Battle royale, first-person shooter",
         imageUrl:
           "https://m.media-amazon.com/images/M/MV5BZWYxY2VmN2ItNjNlNi00ZmM0LWEwMjEtMTE1NGQxMGVhMWQxXkEyXkFqcGdeQXVyMTk2OTAzNTI@._V1_FMjpg_UX1000_.jpg",
-        summary: "Some description",
+        summary:
+          "Warzone is a component of Call of Duty: Modern Warfare and integrates content from Call of Duty: Black Ops Cold War and Call of Duty: Vanguard. The game featured three main modes, a Battle Royale mode, a Plunder mode, and a Resurgence mode added with the Season One of Black Ops Cold War.",
       },
       "126777f5-3277-42ad-b874-76d043b069cb": {
         _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",

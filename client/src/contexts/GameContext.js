@@ -31,10 +31,15 @@ export const GameProvider = ({ children }) => {
     navigate(`/gameshelf/${values._id}`);
   };
 
+  const deleteGame = (gameId) => {
+    setGames((state) => state.filter((game) => game._id !== gameId));
+  };
+
   const contextData = {
     games,
     onAddGameSubmit,
     onGameEditSubmit,
+    deleteGame,
   };
 
   return (
