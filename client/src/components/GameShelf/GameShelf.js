@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useGameContext } from "../../contexts/GameContext";
 import { Game } from "./Game/Game";
 
@@ -45,6 +46,8 @@ export const GameShelf = () => {
         : Object.keys(filteredData).length === 0 && (
             <div className="gameshelf-section-games-empty">
               <h2>Sorry, this game is not added yet...</h2>
+              <h4>Go and add your recommended game!</h4>
+              <Link to="/addgame">Add Game</Link>
             </div>
           )}
     </section>
