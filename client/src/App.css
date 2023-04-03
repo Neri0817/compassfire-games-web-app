@@ -515,8 +515,6 @@ header {
 }
 
 /* * GameDetails */
-/*! TODO*/
-
 .details-section-container {
   display: flex;
   justify-content: center;
@@ -801,6 +799,8 @@ header {
   text-shadow: 1px 1px 2px #427388;
   cursor: pointer;
 }
+
+/* * Favourites */
 
 /* * Footer */
 

@@ -16,33 +16,36 @@ import { AuthProvider } from "./contexts/AuthContext";
 import { GameProvider } from "./contexts/GameContext";
 import { RouteGuard } from "./components/common/RouteGuard";
 import { MyFavourites } from "./components/Favourites/Favourites";
+import { FavoritesProvider } from "./contexts/FavouritesContext";
 
 function App() {
   return (
     <AuthProvider>
       <GameProvider>
-        <Header />
+        <FavoritesProvider>
+          <Header />
 
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/gameshelf" element={<GameShelf />} />
-            <Route path="/gameshelf/:gameId" element={<GameDetails />} />
+          <main>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/gameshelf" element={<GameShelf />} />
+              <Route path="/gameshelf/:gameId" element={<GameDetails />} />
 
-            <Route element={<RouteGuard />}>
-              <Route path="/gameshelf/:gameId/edit" element={<EditGame />} />
-              <Route path="/addgame" element={<AddGame />} />
-              <Route path="/myfavourites" element={<MyFavourites />} />
-              <Route path="/logout" element={<Logout />} />
-            </Route>
+              <Route element={<RouteGuard />}>
+                <Route path="/gameshelf/:gameId/edit" element={<EditGame />} />
+                <Route path="/addgame" element={<AddGame />} />
+                <Route path="/myfavourites" element={<MyFavourites />} />
+                <Route path="/logout" element={<Logout />} />
+              </Route>
 
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-          </Routes>
-        </main>
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
+            </Routes>
+          </main>
 
-        <Footer />
+          <Footer />
+        </FavoritesProvider>
       </GameProvider>
     </AuthProvider>
   );
