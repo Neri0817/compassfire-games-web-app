@@ -30,11 +30,11 @@ export const Game = ({ title, category, imageUrl, _id }) => {
         <div className="gameshelf-section-games-card-info-container">
           {isFavorite ? (
             <button onClick={handleRemoveFromFavorites}>
-              <i className="fa-regular fa-heart fa-flip"></i>
+              <i className="fa-solid fa-heart"></i>
             </button>
           ) : (
             <button onClick={handleAddToFavorites}>
-              <i className="fa-solid fa-heart"></i>
+              <i className="fa-regular fa-heart fa-flip"></i>
             </button>
           )}
         </div>
