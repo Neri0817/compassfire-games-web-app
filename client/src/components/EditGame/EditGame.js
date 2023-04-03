@@ -25,6 +25,7 @@ export const EditGame = () => {
     gameService.getOne(gameId).then((result) => {
       changeValues(result);
     });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [gameId]);
 
   return (

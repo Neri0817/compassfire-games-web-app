@@ -9,9 +9,11 @@ export const GameProvider = ({ children }) => {
   const [games, setGames] = useState([]);
   const gameService = gameServiceFactory();
 
+  const newLocal = [];
   useEffect(() => {
     gameService.getAll().then((games) => setGames(games));
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, newLocal);
 
   const onAddGameSubmit = async (data) => {
     const addedGame = await gameService.addGame(data);

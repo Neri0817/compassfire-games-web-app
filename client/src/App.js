@@ -13,8 +13,9 @@ import { EditGame } from "./components/EditGame/EditGame";
 
 import { Route, Routes } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
-import { RouteGuard } from "./components/common/RouteGuard";
 import { GameProvider } from "./contexts/GameContext";
+import { RouteGuard } from "./components/common/RouteGuard";
+import { MyFavourites } from "./components/Favourites/Favourites";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Route element={<RouteGuard />}>
               <Route path="/gameshelf/:gameId/edit" element={<EditGame />} />
               <Route path="/addgame" element={<AddGame />} />
+              <Route path="/myfavourites" element={<MyFavourites />} />
               <Route path="/logout" element={<Logout />} />
             </Route>
 

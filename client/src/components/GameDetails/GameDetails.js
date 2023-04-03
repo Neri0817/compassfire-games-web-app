@@ -30,6 +30,7 @@ export const GameDetails = () => {
 
       dispatch({ type: "GAME_FETCH", payload: gameState });
     });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [gameId]);
 
   const onCommentSubmit = async (values) => {
@@ -57,12 +58,6 @@ export const GameDetails = () => {
     navigate("/gameshelf");
   };
 
-  // if (game.comments) {
-  //   const keys = Object.keys(game.comments);
-  //   console.log(keys);
-  // } else {
-  //   console.log("⛔️ Object is falsy");
-  // }
 
   return (
     <section className="details-section">
