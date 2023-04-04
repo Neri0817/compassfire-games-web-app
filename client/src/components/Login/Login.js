@@ -1,11 +1,17 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { useAuthContext } from "../../contexts/AuthContext";
 import { useForm } from "../../hooks/useForm";
+import { validation } from "../../services/validation";
 
 const LoginFormKeys = {
   Email: "email",
   Password: "password",
+  touched: {
+    email: false,
+    password: false,
+  },
 };
 
 export const Login = () => {
@@ -14,9 +20,25 @@ export const Login = () => {
     {
       [LoginFormKeys.Email]: "",
       [LoginFormKeys.Password]: "",
+      [LoginFormKeys.touched]: Boolean,
     },
     onLoginSubmit
   );
+  const [errors, setErrors] = useState({});
+
+  useEffect(() => {
+    setErrors(validation(values));
+  }, [values]);
+
+  const handleBlur = (event) => {
+    const { name, value } = event.target;
+
+    // Validate the value
+    const error = validation(name, value);
+
+    // Update the errors state
+    setErrors({ ...errors, [name]: error });
+  };
 
   return (
     <section className="login-section">
@@ -35,22 +57,28 @@ export const Login = () => {
             </p>
 
             <div className="login-section-container-div-form-input">
+              {errors.email && <p className="errors-style">{errors.email}</p>}
               <input
                 type="email"
                 placeholder="Email"
                 name={LoginFormKeys.Email}
                 value={values[LoginFormKeys.Email]}
                 onChange={changeHandler}
+                onBlur={handleBlur}
               />
             </div>
 
             <div className="login-section-container-div-form-input">
+              {errors.password && (
+                <p className="errors-style">{errors.password}</p>
+              )}
               <input
                 type="password"
                 placeholder="Password"
                 name={LoginFormKeys.Password}
                 value={values[LoginFormKeys.Password]}
                 onChange={changeHandler}
+                onBlur={handleBlur}
               />
             </div>
 
