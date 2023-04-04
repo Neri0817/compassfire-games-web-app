@@ -17,6 +17,7 @@ import { GameProvider } from "./contexts/GameContext";
 import { RouteGuard } from "./components/common/RouteGuard";
 import { MyFavourites } from "./components/Favourites/Favourites";
 import { FavoritesProvider } from "./contexts/FavouritesContext";
+import { Profile } from "./components/Profile/Profile";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
                 <Route path="/gameshelf/:gameId/edit" element={<EditGame />} />
                 <Route path="/addgame" element={<AddGame />} />
                 <Route path="/myfavourites" element={<MyFavourites />} />
+                <Route path="/myaccount" element={<Profile />} />
                 <Route path="/logout" element={<Logout />} />
               </Route>
 

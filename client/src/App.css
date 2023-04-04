@@ -50,7 +50,8 @@ body {
 .login-section,
 .details-section,
 .edit-section,
-.favourites-section {
+.favourites-section,
+.profile-section {
   padding: 35px;
 }
 
@@ -61,13 +62,22 @@ body {
 .login-section-heading,
 .details-section-heading,
 .edit-section-heading,
-.favourites-section-heading {
+.favourites-section-heading,
+.profile-section-heading {
   text-align: center;
   font-size: 64px;
   font-weight: 900;
   color: white;
   text-shadow: 3px 2px #df5d20;
   border-bottom: 2px solid #df5d20;
+  padding-bottom: 20px;
+  margin-top: 0;
+}
+
+.profile-section-container-heading {
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px #df5d20;
   padding-bottom: 20px;
   margin-top: 0;
 }
