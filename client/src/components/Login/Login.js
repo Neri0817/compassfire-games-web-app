@@ -19,7 +19,7 @@ export const Login = () => {
     },
     onLoginSubmit
   );
-  
+
   const [errors, setErrors] = useState({});
 
   useEffect(() => {
@@ -53,7 +53,13 @@ export const Login = () => {
             </p>
 
             <div className="login-section-container-div-form-input">
-              {errors.email && <p className="errors-style">{errors.email}</p>}
+              {errors.email && (
+                <p className="errors-style">
+                  <i className="fa-solid fa-triangle-exclamation fa-beat-fade"></i>
+                  &nbsp; &nbsp;
+                  {errors.email}
+                </p>
+              )}
               <input
                 type="email"
                 placeholder="Email"
@@ -66,7 +72,11 @@ export const Login = () => {
 
             <div className="login-section-container-div-form-input">
               {errors.password && (
-                <p className="errors-style">{errors.password}</p>
+                <p className="errors-style">
+                  <i className="fa-solid fa-triangle-exclamation fa-beat-fade"></i>
+                  &nbsp; &nbsp;
+                  {errors.password}
+                </p>
               )}
               <input
                 type="password"

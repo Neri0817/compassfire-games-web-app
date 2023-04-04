@@ -4,7 +4,7 @@ export const validation = (fieldName, value) => {
   switch (fieldName) {
     case "email":
       if (!value) {
-        error = "Email is required";
+        error = "Email is required!";
       } else if (!/\S+@\S+\.\S+/.test(value)) {
         error = "Email is invalid";
       }
