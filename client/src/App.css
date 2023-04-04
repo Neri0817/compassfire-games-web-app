@@ -51,7 +51,8 @@ body {
 .details-section,
 .edit-section,
 .favourites-section,
-.profile-section {
+.profile-section,
+.page-404-section {
   padding: 35px;
 }
 
@@ -63,7 +64,8 @@ body {
 .details-section-heading,
 .edit-section-heading,
 .favourites-section-heading,
-.profile-section-heading {
+.profile-section-heading,
+.page-404-section-heading {
   text-align: center;
   font-size: 64px;
   font-weight: 900;
@@ -80,6 +82,51 @@ body {
   text-shadow: 1px 1px #df5d20;
   padding-bottom: 20px;
   margin-top: 0;
+}
+
+/* * Page Not Found */
+.page-404-section-img {
+  width: 500px;
+  height: 500px;
+  background: url("./images/404.png") no-repeat center;
+  background-size: contain;
+  margin: 0 auto;
+}
+
+.page-404-section-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.page-404-section-container-btn{
+  margin: 0px 20px 40px 20px;
+}
+
+.page-404-section-container-btn a {
+  background-color: #df5d20;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  outline: 1px solid;
+  outline-color: rgba(255, 255, 255, 0.5);
+  outline-offset: 0px;
+  text-shadow: none;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.page-404-section-container-btn a:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),
+    0 0 20px rgba(255, 255, 255, 0.2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388;
+  cursor: pointer;
 }
 
 /* * Header */

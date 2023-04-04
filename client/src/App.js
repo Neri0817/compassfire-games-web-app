@@ -18,6 +18,7 @@ import { RouteGuard } from "./components/common/RouteGuard";
 import { MyFavourites } from "./components/Favourites/Favourites";
 import { FavoritesProvider } from "./contexts/FavouritesContext";
 import { Profile } from "./components/Profile/Profile";
+import { PageNotFound } from "./components/PageNotFound/PageNotFound";
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
 
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
+              <Route path="/*" element={<PageNotFound />} />
             </Routes>
           </main>
 
