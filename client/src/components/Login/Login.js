@@ -8,10 +8,6 @@ import { validation } from "../../services/validation";
 const LoginFormKeys = {
   Email: "email",
   Password: "password",
-  touched: {
-    email: false,
-    password: false,
-  },
 };
 
 export const Login = () => {
@@ -20,7 +16,6 @@ export const Login = () => {
     {
       [LoginFormKeys.Email]: "",
       [LoginFormKeys.Password]: "",
-      [LoginFormKeys.touched]: Boolean,
     },
     onLoginSubmit
   );
