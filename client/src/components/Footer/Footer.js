@@ -62,7 +62,7 @@ export const Footer = () => {
               </a>
             </div>
           </div>
-          <div className=" footer-img-logo">
+          <div className="footer-col footer-img-logo">
             <Link to="/">
               <img src={logo} alt={"CompassFire Logo"} />
             </Link>

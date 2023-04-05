@@ -99,7 +99,7 @@ body {
   text-align: center;
 }
 
-.page-404-section-container-btn{
+.page-404-section-container-btn {
   margin: 0px 20px 40px 20px;
 }
 
@@ -1039,4 +1039,261 @@ header {
 
 .errors-style {
   color: red;
+}
+
+@media screen and (max-width: 1160px) {
+  /* * Footer */
+  .footer-container-row {
+    margin-left: 30px;
+  }
+
+  .footer-col {
+    width: 50%;
+    padding: 0 15px;
+    margin-bottom: 35px;
+  }
+
+  .footer-img-logo {
+    position: absolute;
+    top: 63%;
+    left: 73%;
+    margin-bottom: 0;
+  }
+
+  /* * Home */
+  .home-section-content h1 {
+    font-size: 65px;
+  }
+
+  .home-section-content a {
+    position: absolute;
+    top: 55%;
+    left: 20%;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  /* * Home */
+  .home-section-content h1 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  /* * Home */
+  .home-section-content h1 {
+    font-size: 50px;
+  }
+
+  .home-section-content a {
+    position: absolute;
+    top: 45%;
+    left: 26%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  /* * Home */
+  .home-section .home-section-img {
+    width: 300px;
+    height: 452px;
+  }
+
+  .home-section-content a {
+    position: absolute;
+    top: 65%;
+    left: 40%;
+  }
+}
+
+@media screen and (max-width: 715px) {
+  /* * Home */
+  .home-section-content h1 {
+    font-size: 40px;
+  }
+
+  .home-section-content h4 {
+    font-size: 13px;
+  }
+
+  .home-section-content a {
+    position: absolute;
+    top: 55%;
+    left: 30%;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  /* * Header */
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-ul {
+    align-items: center;
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    margin-right: 30px;
+  }
+
+  .navbar-ul li {
+    margin: 15px auto;
+  }
+
+  /* * Footer */
+}
+
+@media screen and (max-width: 650px) {
+  /* * Home */
+  .home-section-content h1 {
+    font-size: 30px;
+  }
+
+  .home-section-content h4 {
+    font-size: 10px;
+  }
+
+  .home-section-content a {
+    position: absolute;
+    top: 45%;
+    left: 30%;
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  /* * Home */
+  .home-section .home-section-img {
+    width: 200px;
+    height: 302px;
+  }
+
+  .home-section-content a {
+    position: absolute;
+    top: 65%;
+    left: 30%;
+    font-size: 7px;
+    padding: 5px 10px;
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /* * Footer */
+  .footer-img-logo {
+    position: absolute;
+    top: 63%;
+    left: 73%;
+    margin-bottom: 0;
+  }
+
+  .footer-col h4 {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+
+  .footer-col ul li a {
+    font-size: 10px;
+  }
+
+  .footer-col .social-links a {
+    height: 25px;
+    width: 25px;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  /* * Header */
+  .navbar-ul {
+    margin-right: 30px;
+  }
+
+  /* * Home */
+  .home-section {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 0px;
+  }
+
+  .home-section .home-section-img {
+    margin: 0 auto;
+  }
+
+  .home-section .home-section-img {
+    width: 150px;
+    height: 225px;
+    margin-top: 50px;
+  }
+
+  .home-section-content a {
+    top: 40%;
+    left: 50%;
+  }
+
+  /* * Footer */
+  .footer-p {
+    font-size: 10px;
+  }
+
+  .footer-container-row {
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  /* * Header */
+  .navbar img {
+    width: 210px;
+    height: 100%;
+  }
+
+  .navbar-ul a {
+    font-size: 12px;
+  }
+
+  /* * Home */
+  .home-section-content h1 {
+    font-size: 22px;
+  }
+
+  .home-section-content h4 {
+    font-size: 7px;
+  }
+
+  .home-section-content a {
+    top: 40%;
+    font-size: 7px;
+  }
+
+  .home-section .home-section-img {
+    width: 125px;
+    height: 189px;
+    margin-top: 50px;
+  }
+
+  /* * Footer */
+  .footer-container-row {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .footer-col {
+    width: 70%;
+  }
+
+  .footer-img-logo {
+    position: absolute;
+    top: 84%;
+    left: 50%;
+  }
+
+  .footer-p {
+    font-size: 7px;
+  }
 }
