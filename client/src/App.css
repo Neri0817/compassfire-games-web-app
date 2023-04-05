@@ -366,7 +366,7 @@ header {
   width: 45%;
   height: 42.5px;
   padding: 0 10px;
-  border: none;
+  border: 0px;
   outline: none;
   font-family: "Open Sans", sans-serif;
 }
@@ -374,7 +374,7 @@ header {
 .gameshelf-section-search-btn {
   height: 42px;
   width: 80px;
-  border: none;
+  border: 0px;
   background-color: #eb7037;
 }
 
@@ -1040,6 +1040,14 @@ header {
   color: red;
 }
 
+@media screen and (max-width: 1470px) {
+  /* * Gameshelf */
+  .gameshelf-section-games {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+  }
+}
+
 @media screen and (max-width: 1390px) {
   .about-section-header-content h1 {
     font-size: 50px;
@@ -1212,6 +1220,11 @@ header {
   .navbar-ul {
     width: 100%;
   }
+
+  /* * Gameshelf */
+  .gameshelf-section-search input {
+    height: 41.5px;
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -1332,6 +1345,12 @@ header {
     left: 30%;
     font-size: 8px;
   }
+
+  /* * Gameshelf */
+  .gameshelf-section-games {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+  }
 }
 
 @media screen and (max-width: 570px) {
@@ -1358,6 +1377,12 @@ header {
   .about-section-main-p {
     padding: 0;
     font-size: 14px;
+  }
+
+  /* * GameShelf */
+  .gameshelf-section-games {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -1471,6 +1496,30 @@ header {
 
   .footer-container-row {
     margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  /* * Gameshelf */
+  .gameshelf-section-games-card {
+    width: 150px;
+  }
+
+  .gameshelf-section-games-card-info h1 {
+    font-size: 20px;
+  }
+
+  .gameshelf-section-games-card-info p {
+    font-size: 10px;
+  }
+
+  .gameshelf-section-games-card-info button {
+    font-size: 10px;
+    bottom: -20%;
+  }
+
+  .gameshelf-section-games-card-info-container i {
+    height: 13px;
   }
 }
 
