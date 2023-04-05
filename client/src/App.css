@@ -147,7 +147,6 @@ header {
 
 .navbar-ul {
   display: flex;
-  width: 50%;
   justify-content: space-evenly;
   align-items: center;
 }
@@ -1041,6 +1040,17 @@ header {
   color: red;
 }
 
+@media screen and (max-width: 1390px) {
+  .about-section-header-content h1 {
+    font-size: 50px;
+  }
+
+  .about-section-header-img {
+    width: 450px;
+    height: 150px;
+  }
+}
+
 @media screen and (max-width: 1160px) {
   /* * Footer */
   .footer-container-row {
@@ -1070,6 +1080,15 @@ header {
     top: 55%;
     left: 20%;
   }
+
+  .navbar-ul {
+    width: 65%;
+  }
+
+  /* * About */
+  .about-section-header-content h1 {
+    font-size: 40px;
+  }
 }
 
 @media screen and (max-width: 1050px) {
@@ -1077,9 +1096,35 @@ header {
   .home-section-content h1 {
     font-size: 50px;
   }
+
+  .navbar-ul {
+    width: 65%;
+  }
+
+  /* * About */
+  .about-section-header-content h1 {
+    font-size: 30px;
+  }
+
+  .about-section-main-p {
+    padding: 50px;
+  }
 }
 
 @media screen and (max-width: 1000px) {
+  .about-section-heading,
+  .gameshelf-section-heading,
+  .addgame-section-heading,
+  .register-section-heading,
+  .login-section-heading,
+  .details-section-heading,
+  .edit-section-heading,
+  .favourites-section-heading,
+  .profile-section-heading,
+  .page-404-section-heading {
+    font-size: 55px;
+  }
+
   /* * Home */
   .home-section-content h1 {
     font-size: 50px;
@@ -1090,9 +1135,27 @@ header {
     top: 45%;
     left: 26%;
   }
+
+  /* * About */
+  .about-section-main-items-info p {
+    font-size: 12px;
+  }
 }
 
 @media screen and (max-width: 950px) {
+  .about-section-heading,
+  .gameshelf-section-heading,
+  .addgame-section-heading,
+  .register-section-heading,
+  .login-section-heading,
+  .details-section-heading,
+  .edit-section-heading,
+  .favourites-section-heading,
+  .profile-section-heading,
+  .page-404-section-heading {
+    font-size: 50px;
+  }
+
   /* * Home */
   .home-section .home-section-img {
     width: 300px;
@@ -1104,9 +1167,78 @@ header {
     top: 65%;
     left: 40%;
   }
+
+  /* * About */
+  .about-section-header-content h1 {
+    font-size: 25px;
+  }
+
+  .about-section-header-img {
+    width: 350px;
+    height: 100px;
+  }
+
+  .about-section-main-p {
+    padding: 35px;
+    font-size: 18px;
+  }
+
+  .about-section-main-img {
+    width: 350px;
+    height: 225px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  /* * Header */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navbar-ul {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  /* * Header */
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-ul {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  /* * About */
+  .about-section-header-content h1 {
+    font-size: 20px;
+  }
+
+  .about-section-header-content span {
+    font-size: 12px;
+  }
 }
 
 @media screen and (max-width: 715px) {
+  .about-section-heading,
+  .gameshelf-section-heading,
+  .addgame-section-heading,
+  .register-section-heading,
+  .login-section-heading,
+  .details-section-heading,
+  .edit-section-heading,
+  .favourites-section-heading,
+  .profile-section-heading,
+  .page-404-section-heading {
+    font-size: 45px;
+  }
+
   /* * Home */
   .home-section-content h1 {
     font-size: 40px;
@@ -1135,7 +1267,6 @@ header {
   .navbar-ul {
     align-items: center;
     display: flex;
-    width: 50%;
     flex-direction: column;
     margin-right: 30px;
   }
@@ -1144,10 +1275,48 @@ header {
     margin: 15px auto;
   }
 
-  /* * Footer */
+  /* * About */
+  .about-section-header {
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .about-section-header-img {
+    margin: 0 auto;
+  }
+
+  .about-section-header-content h1 {
+    font-size: 40px;
+  }
+
+  .about-section-main-p {
+    font-size: 16px;
+  }
+
+  .about-section-main-items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-section-main-items-info {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 650px) {
+  .about-section-heading,
+  .gameshelf-section-heading,
+  .addgame-section-heading,
+  .register-section-heading,
+  .login-section-heading,
+  .details-section-heading,
+  .edit-section-heading,
+  .favourites-section-heading,
+  .profile-section-heading,
+  .page-404-section-heading {
+    font-size: 40px;
+  }
+
   /* * Home */
   .home-section-content h1 {
     font-size: 30px;
@@ -1180,6 +1349,16 @@ header {
     padding: 5px 10px;
     font-size: 9px;
   }
+
+  /* * About */
+  .about-section-header-content h1 {
+    font-size: 30px;
+  }
+
+  .about-section-main-p {
+    padding: 0;
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -1208,6 +1387,19 @@ header {
 }
 
 @media screen and (max-width: 450px) {
+  .about-section-heading,
+  .gameshelf-section-heading,
+  .addgame-section-heading,
+  .register-section-heading,
+  .login-section-heading,
+  .details-section-heading,
+  .edit-section-heading,
+  .favourites-section-heading,
+  .profile-section-heading,
+  .page-404-section-heading {
+    font-size: 30px;
+  }
+
   /* * Header */
   .navbar-ul {
     margin-right: 30px;
@@ -1235,6 +1427,43 @@ header {
     left: 50%;
   }
 
+  /* * About */
+  .about-section-header-content h1 {
+    font-size: 20px;
+  }
+
+  .about-section-header-img {
+    width: 250px;
+    height: 75px;
+  }
+
+  .about-section-main-p {
+    padding: 0;
+    font-size: 10px;
+  }
+
+  .about-section-main-img {
+    width: 200px;
+    height: 130px;
+  }
+
+  .about-section-main-items-info i {
+    font-size: 20px;
+  }
+
+  .about-section-main-items-info h3 {
+    font-size: 16px;
+  }
+
+  .about-section-main-items {
+    margin: 0;
+    align-items: center;
+  }
+
+  .about-section-main-items-info {
+    width: 50%;
+  }
+
   /* * Footer */
   .footer-p {
     font-size: 10px;
@@ -1245,7 +1474,45 @@ header {
   }
 }
 
+@media screen and (max-width: 350px) {
+  /* * About */
+  .about-section-main-p {
+    padding: 0;
+    font-size: 7px;
+  }
+
+  .about-section-header-content h1 {
+    font-size: 18px;
+  }
+
+  .about-section-main-items-info h3 {
+    font-size: 13px;
+  }
+
+  .about-section-main-items-info p {
+    font-size: 8px;
+  }
+
+  .about-section-main-items-info {
+    padding: 10px;
+    margin: 10px auto;
+  }
+}
+
 @media screen and (max-width: 300px) {
+  .about-section-heading,
+  .gameshelf-section-heading,
+  .addgame-section-heading,
+  .register-section-heading,
+  .login-section-heading,
+  .details-section-heading,
+  .edit-section-heading,
+  .favourites-section-heading,
+  .profile-section-heading,
+  .page-404-section-heading {
+    font-size: 25px;
+  }
+
   /* * Header */
   .navbar img {
     width: 210px;
@@ -1274,6 +1541,46 @@ header {
     width: 125px;
     height: 189px;
     margin-top: 50px;
+  }
+
+  /* * About */
+  .about-section-header-content h1 {
+    font-size: 14px;
+  }
+
+  .about-section-header-img {
+    width: 150px;
+    height: 40px;
+  }
+
+  .about-section-header-content span {
+    font-size: 8px;
+  }
+
+  .about-section-main-p {
+    padding: 0;
+    font-size: 5px;
+  }
+
+  .about-section-main-img {
+    width: 100px;
+    height: 65px;
+  }
+
+  .about-section-main-items-info {
+    width: 80%;
+  }
+
+  .about-section-main-items-info i {
+    font-size: 14px;
+  }
+
+  .about-section-main-items-info h3 {
+    font-size: 9px;
+  }
+
+  .about-section-main-items-info p {
+    font-size: 6px;
   }
 
   /* * Footer */
