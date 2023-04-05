@@ -1,6 +1,7 @@
 import { requestFactory } from "./requester";
 
-const baseUrl = "http://localhost:3030/data/games";
+// const baseUrl = "http://localhost:3030/data/games";
+const baseUrl = "https://compassfire-games-service.onrender.com/data/games";
 
 export const gameServiceFactory = (token) => {
   const request = requestFactory(token);

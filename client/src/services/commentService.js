@@ -1,6 +1,7 @@
 import { requestFactory } from './requester';
 
-const baseUrl = 'http://localhost:3030/data/comments';
+// const baseUrl = 'http://localhost:3030/data/comments';
+const baseUrl = 'https://compassfire-games-service.onrender.com/data/comments';
 const request = requestFactory();
 
 export const getAll = async (gameId) => {
