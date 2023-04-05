@@ -1,17 +1,6 @@
-# CompassFire Games web-app
-
-### **To launch the application:**
-
-###### On terminal write:
-
-1. npm i
-2. cd client -> npm i -> npm start
-3. cd server -> node server.js
-
----
-
-
 # Welcome to CompassFire Games!
+
+## Deployed app link: https://compassfire-games-570be.web.app
 
 CompassFire Games is a web app that allows you to search for your favorite games and interact with other gaming enthusiasts. With Gameshelf page, you can browse through a curated collection of games, add new games to the collection, and leave comments on games that you've played.
 
