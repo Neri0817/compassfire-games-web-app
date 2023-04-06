@@ -1098,6 +1098,12 @@ header {
   .about-section-header-content h1 {
     font-size: 40px;
   }
+
+  /* * Add Game */
+
+  .addgame-section-container {
+    max-width: 65vw;
+  }
 }
 
 @media screen and (max-width: 1050px) {
@@ -1208,6 +1214,12 @@ header {
   .navbar-ul {
     width: 75%;
   }
+
+  /* * Add Game */
+
+  .addgame-section-container {
+    max-width: 75vw;
+  }
 }
 
 @media screen and (max-width: 850px) {
@@ -1236,6 +1248,12 @@ header {
 
   .about-section-header-content span {
     font-size: 12px;
+  }
+
+  /* * Add Game */
+
+  .addgame-section-container {
+    max-width: 85vw;
   }
 }
 
@@ -1314,6 +1332,24 @@ header {
 
   .about-section-main-items-info {
     width: 100%;
+  }
+
+  /* * Add Game */
+
+  .addgame-section-container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .addgame-section-container-img {
+    width: 35%;
+    height: 30vh;
+  }
+
+  .addgame-section-container-form {
+    width: 70%;
   }
 }
 
@@ -1408,6 +1444,39 @@ header {
   .footer-col .social-links a {
     height: 25px;
     width: 25px;
+    font-size: 10px;
+  }
+
+  /* * Add Game */
+
+  .addgame-section-container-form {
+    width: 85%;
+  }
+
+  .addgame-section-container-img {
+    width: 35%;
+    height: 20vh;
+  }
+
+  .addgame-section-container-form div,
+  .edit-section-container-form div {
+    margin: 15px 0;
+  }
+
+  .addgame-section-container-form div label,
+  .edit-section-container-form div label {
+    margin-bottom: 7px;
+    font-size: 16px;
+  }
+
+  .addgame-section-container-form div input,
+  .edit-section-container-form div input {
+    height: 30px;
+    font-size: 10px;
+  }
+
+  .addgame-section-container-form div textarea,
+  .edit-section-container-form div textarea {
     font-size: 10px;
   }
 }
@@ -1514,6 +1583,19 @@ header {
   .footer-container-row {
     margin-left: 0px;
   }
+
+  /* * Add Game */
+  .addgame-section-container-form div label,
+  .edit-section-container-form div label {
+    margin-bottom: 7px;
+    font-size: 14px;
+  }
+
+  .addgame-section-container-form-btn,
+  .edit-section-container-form-btn {
+    padding: 5px 15px;
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -1537,6 +1619,12 @@ header {
 
   .gameshelf-section-games-card-info-container i {
     height: 13px;
+  }
+
+  /* * Add Game */
+  .addgame-section-container-img {
+    width: 35%;
+    height: 15vh;
   }
 }
 
@@ -1562,6 +1650,16 @@ header {
   .about-section-main-items-info {
     padding: 10px;
     margin: 10px auto;
+  }
+
+  /* * Add Game */
+  .addgame-section-container-img {
+    width: 35%;
+    height: 12vh;
+  }
+
+  .addgame-section-container-form {
+    width: 100%;
   }
 }
 
@@ -1668,5 +1766,26 @@ header {
 
   .footer-p {
     font-size: 7px;
+  }
+
+  /* * Add Game */
+  .addgame-section-container-img {
+    width: 35%;
+    height: 10vh;
+  }
+
+  .addgame-section-container-form {
+    width: 115%;
+  }
+
+  .addgame-section-container-form div label,
+  .edit-section-container-form div label {
+    margin-bottom: 6px;
+    font-size: 12px;
+  }
+
+  .addgame-section-container-form-btn,
+  .edit-section-container-form-btn {
+    margin: 10px auto;
   }
 }
