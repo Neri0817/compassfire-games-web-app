@@ -1244,6 +1244,11 @@ header {
   .details-section-container-info-btn {
     width: 35%;
   }
+
+  /* * Edit */
+  .edit-section-container-form {
+    width: 40%;
+  }
 }
 
 @media screen and (max-width: 950px) {
@@ -1330,6 +1335,11 @@ header {
     justify-content: center;
     margin: 40px;
   }
+
+  /* * Edit */
+  .edit-section-container-img {
+    width: 400px;
+  }
 }
 
 @media screen and (max-width: 850px) {
@@ -1389,6 +1399,13 @@ header {
 
   .details-create-comment-form textarea {
     font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  /* * Edit */
+  .edit-section-container-form {
+    width: 50%;
   }
 }
 
@@ -1557,6 +1574,25 @@ header {
     width: 50%;
     margin: 0 auto 20px auto;
   }
+
+  /* * Edit */
+  .edit-section-container {
+    flex-direction: column-reverse;
+  }
+
+  .edit-section-container-img {
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  .edit-section-container-img {
+    height: 285px;
+  }
+
+  .edit-section-container-form {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -1633,6 +1669,25 @@ header {
   .favorite-section-empty a {
     padding: 5px 10px;
     font-size: 12px;
+  }
+
+  /* * Edit */
+  .edit-section-container-img {
+    height: 235px;
+  }
+
+  .edit-section-container-form div label {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  .edit-section-container-form div input {
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .edit-section-container-form div textarea {
+    font-size: 10px;
   }
 }
 
@@ -1820,6 +1875,11 @@ header {
     width: 80%;
     padding: 0;
   }
+
+  /* * Edit */
+  .edit-section-container-img {
+    height: 180px;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -1972,6 +2032,26 @@ header {
   .login-section-container-div-form-btn {
     position: relative;
     left: 40%;
+  }
+
+  /* * Edit */
+  .edit-section-container-img {
+    height: 150px;
+    width: 200px;
+  }
+  .edit-section-container-form {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .edit-section-container-img {
+    height: 110px;
+    width: 200px;
+  }
+
+  .edit-section-container-form div label {
+    margin-bottom: 6px;
+    font-size: 10px;
   }
 }
 
@@ -2317,5 +2397,20 @@ header {
 
   .details-comments ul {
     width: 90%;
+  }
+
+  /* * Edit */
+  .edit-section-container-form div input {
+    height: 22px;
+    font-size: 7px;
+  }
+
+  .edit-section-container-form div textarea {
+    font-size: 7px;
+  }
+
+  .edit-section-container-form-btn {
+    padding: 5px 10px;
+    font-size: 10px;
   }
 }
