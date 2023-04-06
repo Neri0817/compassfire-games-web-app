@@ -1,9 +1,11 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { FavoritesContext } from "../../../contexts/FavouritesContext";
+import { AuthContext } from "../../../contexts/AuthContext";
 
 export const Game = ({ title, category, imageUrl, _id }) => {
   const favorites = useContext(FavoritesContext);
+  const { isAuthenticated } = useContext(AuthContext);
 
   const handleAddToFavorites = () => {
     favorites.addToFavorites({ title, category, imageUrl, _id });
@@ -27,17 +29,19 @@ export const Game = ({ title, category, imageUrl, _id }) => {
         <h1>{title}</h1>
         <p>{category}</p>
 
-        <div className="gameshelf-section-games-card-info-container">
-          {isFavorite ? (
-            <button onClick={handleRemoveFromFavorites}>
-              <i className="fa-solid fa-heart"></i>
-            </button>
-          ) : (
-            <button onClick={handleAddToFavorites}>
-              <i className="fa-regular fa-heart fa-flip"></i>
-            </button>
-          )}
-        </div>
+        {isAuthenticated && (
+          <div className="gameshelf-section-games-card-info-container">
+            {isFavorite ? (
+              <button onClick={handleRemoveFromFavorites}>
+                <i className="fa-solid fa-heart"></i>
+              </button>
+            ) : (
+              <button onClick={handleAddToFavorites}>
+                <i className="fa-regular fa-heart fa-flip"></i>
+              </button>
+            )}
+          </div>
+        )}
 
         <Link to={`/gameshelf/${_id}`}>
           <button>Details</button>
