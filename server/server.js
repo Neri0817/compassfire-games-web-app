@@ -1525,16 +1525,45 @@
           "Grand Theft Auto V (also known as Grand Theft Auto Five, GTA 5, GTAV, and Grand Theft Auto V: Story Mode) is a video game developed by Rockstar North.",
         _id: "52116f7c-0d9c-4ffe-8a4d-d46095348352",
       },
-      "f38021ed-b356-448b-bf1a-765ae94c403b": {
+      "201e25a5-045b-491e-923b-db6346632856": {
         _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-        title: "Sonic",
-        category:
-          "Platform, Racing, Action, Fighting, Party, Role-playing, Sports",
+        title: "Watch Dogs",
+        category: "Action-Adventure Open World Stealth",
         imageUrl:
-          "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/81oZQd5HSWL.jpg",
+          "https://m.media-amazon.com/images/M/MV5BM2U1OWNlY2UtZmNlNi00NmExLWIwMzctMjZkMjc4NzM5MTBlXkEyXkFqcGdeQXVyMzY0MTE3NzU@._V1_FMjpg_UX1000_.jpg",
         summary:
-          "Sonic the Hedgehog is a 2D side-scrolling platform game. The gameplay centers on Sonic the Hedgehog's ability to run at high speed through levels that include springs, slopes, bottomless pits, and vertical loops.",
-        _id: "f38021ed-b356-448b-bf1a-765ae94c403b",
+          "Watch Dogs is an action-adventure game, played from a third-person view. The player controls hacker Aiden Pearce, who uses his smartphone to control trains and traffic lights, infiltrate security systems, jam cellphones, access pedestrians' private information, and empty their bank accounts.",
+        _id: "201e25a5-045b-491e-923b-db6346632856",
+      },
+      "5c40d5ab-675c-41d7-a3c3-c3f722994ebb": {
+        _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+        title: "Hogwarts Legacy",
+        category:
+          "Role-playing game, Single-player, Open World, Action Adventure, Western-Style",
+        imageUrl: "https://www.xzone.sk/covergame/9086438.jpg",
+        summary:
+          "Hogwarts Legacy is an immersive, open-world action RPG set in the world first introduced in the Harry Potter books. For the first time, experience Hogwarts in the 1800s. Your character is a student who holds the key to an ancient secret that threatens to tear the wizarding world apart.",
+        _id: "5c40d5ab-675c-41d7-a3c3-c3f722994ebb",
+      },
+      "2ff0ff65-3aa6-4b46-9b84-e1cd90a53df6": {
+        _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+        title: "Red Dead Redemption 2",
+        category: "Action Adventure, Open-World",
+        imageUrl:
+          "https://media.rockstargames.com/rockstargames-newsite/uploads/d5c7e4dcecb612368aee64978f183250b6e643fe.jpg",
+        summary:
+          "After a robbery goes badly wrong in the western town of Blackwater, Arthur Morgan and the Van der Linde gang are forced to flee. With federal agents and the best bounty hunters in the nation massing on their heels, the gang must rob, steal and fight their way across the rugged heartland of America in order to survive.",
+        _id: "2ff0ff65-3aa6-4b46-9b84-e1cd90a53df6",
+      },
+      "4b8a43b1-2f6f-459e-a112-709dda6008e2": {
+        _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+        title: "PUBG: BATTLEGROUNDS",
+        category: "Battle royale",
+        imageUrl:
+          "https://gameday.bg/wp-content/uploads/2018/09/playerunknown-s-battlegrounds-pubg-pc-01.jpg",
+        summary:
+          "PUBG is a player versus player shooter game in which up to one hundred players fight in a battle royale, a type of large-scale last man standing deathmatch where players fight to remain the last alive. Players can choose to enter the match solo, duo, or with a small team of up to four people.",
+        _id: "4b8a43b1-2f6f-459e-a112-709dda6008e2",
       },
     },
     comments: {},
