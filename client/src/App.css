@@ -1491,6 +1491,23 @@ header {
   }
 
   /* * Footer */
+  /* * Footer */
+  .footer-container-row {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .footer-col {
+    width: 70%;
+  }
+
+  .footer-img-logo {
+    position: absolute;
+    top: 83%;
+    left: 50%;
+  }
+
   .footer-p {
     font-size: 10px;
   }
