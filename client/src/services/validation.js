@@ -11,9 +11,14 @@ export const validation = (fieldName, value) => {
       break;
     case "password":
       if (!value) {
-        error = "Password is required";
+        error = "Password is required!";
       } else if (value.length < 6) {
-        error = "Password must be at least 6 characters";
+        error = "Password must be at least 6 characters!";
+      }
+      break;
+    case "text":
+      if (value === "" || !value) {
+        error = "Input is required!";
       }
       break;
 
