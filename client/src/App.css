@@ -149,6 +149,7 @@ header {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  width: 50%;
 }
 
 .navbar-ul li:nth-child(6) p {
@@ -1199,10 +1200,10 @@ header {
 
 @media screen and (max-width: 900px) {
   /* * Header */
-  .navbar {
+  /* .navbar {
     display: flex;
     justify-content: space-between;
-  }
+  } */
 
   .navbar-ul {
     width: 75%;
