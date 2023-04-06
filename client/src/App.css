@@ -1217,6 +1217,33 @@ header {
     position: relative;
     left: 50%;
   }
+
+  /* * Details */
+  .details-comments ul li {
+    font-size: 12px;
+  }
+
+  .details-comments ul p {
+    margin: 5px auto;
+  }
+
+  .details-section-container-category {
+    text-shadow: 1px 5px 4px #0000009c;
+    font-size: 15px;
+  }
+
+  .details-create-comment {
+    margin: 30px auto;
+    width: 65%;
+  }
+
+  .details-section-container-info-summary {
+    width: 100%;
+  }
+
+  .details-section-container-info-btn {
+    width: 35%;
+  }
 }
 
 @media screen and (max-width: 950px) {
@@ -1350,6 +1377,19 @@ header {
     position: relative;
     left: 30%;
   }
+
+  /* * Details */
+  .details-section-container-info-btn {
+    width: 50%;
+  }
+
+  .details-create-comment h2 {
+    font-size: 20px;
+  }
+
+  .details-create-comment-form textarea {
+    font-size: 13px;
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -1372,6 +1412,12 @@ header {
   .favorite-section-empty {
     position: relative;
     left: 10%;
+  }
+
+  /* * Details */
+  .details-section-container-img img {
+    width: 100%;
+    height: 55%;
   }
 }
 
@@ -1495,6 +1541,22 @@ header {
     width: 50%;
     height: 250px;
   }
+
+  /* * Details */
+  .details-section-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .details-section-container-img img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .details-section-container-img {
+    width: 50%;
+    margin: 0 auto 20px auto;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -1531,6 +1593,17 @@ header {
   .gameshelf-section-games {
     display: grid;
     grid-template-columns: repeat(auto-fill, 250px);
+  }
+
+  /* * Details */
+  .details-section-container-info-summary {
+    width: 80%;
+    font-size: 14px;
+  }
+
+  .details-create-comment {
+    margin: 30px auto;
+    width: 80%;
   }
 }
 
@@ -1693,6 +1766,59 @@ header {
   .register-section-container-div-form-btn {
     padding: 5px 10px;
     font-size: 10px;
+  }
+
+  /* * Details */
+  .details-create-comment-form textarea {
+    font-size: 11px;
+  }
+
+  .details-comments h2,
+  .details-section-container-info-heading {
+    font-size: 15px;
+  }
+
+  .details-section-container-info-btn-edit,
+  .details-section-container-info-btn-delete,
+  .details-create-comment-form-submit {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+
+  .details-section-container-info-btn {
+    width: 40%;
+  }
+
+  .details-comments ul li,
+  .details-comments ul li i {
+    font-size: 10px;
+  }
+
+  .details-create-comment h2 {
+    font-size: 16px;
+  }
+
+  .details-section-container-category {
+    font-size: 10px;
+  }
+
+  .details-section-container-info-title {
+    font-size: 25px;
+    margin: 0;
+  }
+
+  .details-section-container-info-summary {
+    width: 80%;
+    font-size: 10px;
+  }
+
+  .details-comments ul li {
+    margin-bottom: 10px;
+  }
+
+  .details-comments ul {
+    width: 80%;
+    padding: 0;
   }
 }
 
@@ -1957,6 +2083,43 @@ header {
   .register-section-container-div-form-input input {
     font-size: 8px;
   }
+
+  /* * Details */
+  .details-section-container-category {
+    font-size: 9px;
+  }
+
+  .details-section-container-info-title {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .details-comments h2,
+  .details-section-container-info-heading {
+    font-size: 12px;
+  }
+
+  .details-comments ul p {
+    margin: 0;
+  }
+
+  .details-create-comment h2 {
+    font-size: 11px;
+  }
+
+  .details-create-comment-form {
+    border: 3px solid #df5d20;
+    padding: 10px;
+  }
+
+  .details-create-comment {
+    margin: 25px auto;
+    width: 100%;
+  }
+
+  .details-create-comment-form textarea {
+    font-size: 9px;
+  }
 }
 
 @media screen and (max-width: 300px) {
@@ -2141,5 +2304,18 @@ header {
 
   .favorite-section-empty h2 {
     font-size: 10px;
+  }
+
+  /* * Details */
+  .details-section-container-info-summary {
+    width: 80%;
+    font-size: 7px;
+  }
+  .details-section-container-info-btn {
+    width: 60%;
+  }
+
+  .details-comments ul {
+    width: 90%;
   }
 }
