@@ -1104,6 +1104,11 @@ header {
   .addgame-section-container {
     max-width: 65vw;
   }
+
+  /* * Login */
+  .login-section-container-div {
+    width: 30%;
+  }
 }
 
 @media screen and (max-width: 1050px) {
@@ -1238,6 +1243,21 @@ header {
   .gameshelf-section-search input {
     height: 41.5px;
   }
+
+  /* * Login */
+  .login-section-container {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+  }
+
+  .login-section-container-div {
+    width: 40%;
+  }
+
+  .login-section-container-img {
+    width: 300px;
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -1351,6 +1371,21 @@ header {
   .addgame-section-container-form {
     width: 70%;
   }
+
+  /* * Login */
+  .login-section-container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .login-section-container-div {
+    width: 50%;
+  }
+
+  .login-section-container-img {
+    width: 30%;
+    height: 255px;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -1387,6 +1422,18 @@ header {
   .gameshelf-section-games {
     display: grid;
     grid-template-columns: repeat(auto-fill, 250px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* * Login */
+  .login-section-container-img {
+    width: 30%;
+    height: 215px;
+  }
+
+  .login-section-container {
+    margin: 0;
   }
 }
 
@@ -1596,6 +1643,42 @@ header {
     padding: 5px 15px;
     font-size: 14px;
   }
+
+  /* * Login */
+  .login-section-container-img {
+    width: 30%;
+    height: 155px;
+  }
+
+  .login-section-container-div-form p {
+    font-size: 11px;
+  }
+
+  .login-section-container-div-form h2 {
+    font-size: 20px;
+  }
+
+  .login-section-container-div {
+    width: 75%;
+  }
+
+  .login-section-container-div-form-input input {
+    padding: 7px;
+    margin-bottom: 15px;
+    font-size: 10px;
+  }
+
+  .register-section-container-div-form-btn,
+  .login-section-container-div-form-btn {
+    margin: 14px 0;
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+
+  .login-section-container-div-form-btn {
+    position: relative;
+    left: 40%;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -1787,5 +1870,37 @@ header {
   .addgame-section-container-form-btn,
   .edit-section-container-form-btn {
     margin: 10px auto;
+  }
+
+  /* * Login */
+  .login-section-container-img {
+    width: 30%;
+    height: 93px;
+  }
+
+  .login-section-container-div-form h2 {
+    font-size: 16px;
+  }
+
+  .login-section-container-div-form p {
+    font-size: 7px;
+  }
+
+  .login-section-container-div-form-input input {
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 7px;
+  }
+
+  .login-section-container-div-form-btn {
+    position: relative;
+    left: 37%;
+  }
+
+  .register-section-container-div-form-btn,
+  .login-section-container-div-form-btn {
+    margin: 8px 0;
+    font-size: 8px;
+    padding: 5px 10px;
   }
 }
