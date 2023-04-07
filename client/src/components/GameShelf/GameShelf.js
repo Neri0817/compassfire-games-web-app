@@ -21,15 +21,16 @@ export const GameShelf = () => {
     <section className="gameshelf-section">
       <h1 className="gameshelf-section-heading">GameShelf</h1>
       <div className="gameshelf-section-search">
-        <form method="">
+        <form>
+          <i className="fa-solid fa-magnifying-glass gameshelf-section-search-btn"></i>
           <input
             onChange={searchHandler}
             type="search"
             placeholder="Search your game..."
           />
-          <button type="submit" className="gameshelf-section-search-btn">
+          {/* <button type="submit" className="gameshelf-section-search-btn">
             <i className="fa-solid fa-magnifying-glass"></i>
-          </button>
+          </button> */}
         </form>
       </div>
       <div className="gameshelf-section-games">
