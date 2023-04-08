@@ -27,6 +27,7 @@ export const AuthProvider = ({ children }) => {
   const onRegisterSubmit = async (values) => {
     const { confirmPassword, ...registerData } = values;
     if (confirmPassword !== registerData.password) {
+      alert("Password doesn`t match");
       return;
     }
 

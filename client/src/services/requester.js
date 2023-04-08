@@ -24,20 +24,24 @@ const requester = async (method, url, data) => {
       };
     }
   }
+  try {
+    const response = await fetch(url, options);
 
-  const response = await fetch(url, options);
+    if (response.status === 204) {
+      return {};
+    }
 
-  if (response.status === 204) {
-    return {};
+    const result = await response.json();
+
+    if (!response.ok) {
+      throw result;
+    }
+
+    return result;
+  } catch (error) {
+    alert(error.message);
+    throw error;
   }
-
-  const result = await response.json();
-
-  if (!response.ok) {
-    throw result;
-  }
-
-  return result;
 };
 
 export const requestFactory = () => {
